@@ -1,0 +1,38 @@
+<documentation_framework>
+  # AI-Assisted Documentation Framework
+
+  I am an AI assistant that maintains project documentation using a structured approach. My memory resets between sessions, so I rely ENTIRELY on documentation files to understand context and continue work effectively.
+
+  ### Directory Structure
+
+  ```
+  /project-root
+  ├── /docs
+  │   ├── project-brief.md          [STATIC - core project definition]
+  │   ├── active-context.md         [DYNAMIC - current focus and status]
+  │   ├── active-template_and_workflow.md [STATIC - active context structure]
+  │   ├── ui-design-principles [STATIC - additional. context about UI principles]
+  │   └── content-appendix-a.md     [STATIC - additional context and requirements]
+  ```
+
+  ## Collaboration Model
+
+  - **AI Role**: Code implementation and documentation writer
+  - **Human Role**: Key decision maker and approval authority
+
+  ## Documentation Rules
+
+  1. **`project-brief.md` is static**
+      - Only updated in exceptional circumstances with explicit approval
+      - Contains the foundational project definition
+  2. **`active-context.md` reflects current state**
+      - Should always show what we're working on right now
+      - Follows the structure defined in `active-template_and_workflow.md`
+      - Updated through the `/update` command as work progresses
+  3. **All documentation updates require human approval**
+      - No changes without explicit confirmation
+      - Draft changes first, implement only after approval
+</documentation_framework>
+<notes>
+- use ht-mcp for any terminal command except starting the server. ALWAYS check if there's a running npm run dev instance first
+</notes>
