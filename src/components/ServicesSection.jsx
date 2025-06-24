@@ -112,14 +112,6 @@ export function ServicesSection() {
             ))}
           </div>
         </div>
-
-        {/* Simple closing text */}
-        <div className="text-center mt-12">
-          <p className="text-warm-gray-600">
-            Klicken Sie auf "Details anzeigen" für weitere Informationen zu
-            jeder Behandlung
-          </p>
-        </div>
       </div>
     </section>
   );
