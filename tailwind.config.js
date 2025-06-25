@@ -36,6 +36,19 @@ export default {
           800: "hsl(345, 75%, 18%)", // Deep bordeaux
           900: "hsl(345, 80%, 15%)", // Darkest bordeaux
         },
+        // Warm Gold palette (luxury accent)
+        gold: {
+          50: "hsl(45, 50%, 96%)", // Very light gold tint
+          100: "hsl(45, 45%, 90%)", // Light gold tint
+          200: "hsl(45, 40%, 80%)", // Soft gold
+          300: "hsl(45, 45%, 70%)", // Medium-light gold
+          400: "hsl(45, 50%, 60%)", // Medium gold
+          500: "hsl(45, 60%, 50%)", // Base gold (#D4AF37)
+          600: "hsl(45, 65%, 40%)", // Dark gold
+          700: "hsl(45, 70%, 30%)", // Very dark gold
+          800: "hsl(45, 75%, 25%)", // Deep gold
+          900: "hsl(45, 80%, 20%)", // Darkest gold
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -86,6 +99,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      // Premium Typography System
+      fontFamily: {
+        serif: ["Playfair Display", "serif"], // For headings - medical authority
+        sans: ["Inter", "sans-serif"], // For body text - modern accessibility
       },
       // Typography scale (elder-friendly)
       fontSize: {

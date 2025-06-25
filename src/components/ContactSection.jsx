@@ -8,9 +8,9 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { siteData } from "@/data/siteData";
 
 const InfoCard = ({ icon: Icon, title, children }) => (
-  <div className="bg-warm-gray-50 p-6 rounded-lg">
-    <div className="flex items-center space-x-3 mb-4">
-      {Icon && <Icon className="h-6 w-6 text-bordeaux-500" />}
+  <div className="bg-card p-8 rounded-lg">
+    <div className="flex items-center space-x-4 mb-6">
+      {Icon && <Icon className="h-7 w-7 text-bordeaux-500" />}
       <h3 className="text-2xl font-bold text-warm-gray-900">{title}</h3>
     </div>
     <div className="text-warm-gray-700 leading-relaxed">{children}</div>
@@ -41,10 +41,10 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-warm-gray-50 to-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-20">
           <h2 className="text-3xl lg:text-4xl font-bold text-warm-gray-900 mb-4">
             Kontakt & Praxis
           </h2>
@@ -57,9 +57,9 @@ export function ContactSection() {
         <Separator className="mb-12 bg-bordeaux-500" />
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Practice Information */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             <InfoCard title="Dr. med. Sarah Müller">
               <p className="text-lg text-bordeaux-600 font-semibold mb-4">
                 Fachärztin für Ästhetische Medizin
@@ -119,7 +119,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-warm-gray-50 p-6 lg:p-8 rounded-lg h-fit">
+          <div className="bg-card p-6 lg:p-8 rounded-lg h-fit">
             <h3 className="text-2xl font-bold text-warm-gray-900 mb-6">
               Nachricht senden
             </h3>

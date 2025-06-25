@@ -9,8 +9,6 @@
   /project-root
   ├── /docs
   │   ├── project-brief.md          [STATIC - core project definition]
-  │   ├── active-context.md         [DYNAMIC - current focus and status]
-  │   ├── active-template_and_workflow.md [STATIC - active context structure]
   │   ├── ui-design-principles [STATIC - additional. context about UI principles]
   │   └── content-appendix-a.md     [STATIC - additional context and requirements]
   ```

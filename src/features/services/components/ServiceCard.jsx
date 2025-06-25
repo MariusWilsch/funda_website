@@ -1,5 +1,5 @@
-import { FeaturedServiceCard } from './FeaturedServiceCard';
-import { StandardServiceCard } from './StandardServiceCard';
+import { FeaturedServiceCard } from "./FeaturedServiceCard";
+import { StandardServiceCard } from "./StandardServiceCard";
 
 export function ServiceCard({
   title,
@@ -8,6 +8,7 @@ export function ServiceCard({
   bullets,
   startingPrice,
   treatments,
+  timingInfo,
   isFeatured = false,
 }) {
   if (isFeatured) {
@@ -19,6 +20,7 @@ export function ServiceCard({
         bullets={bullets}
         startingPrice={startingPrice}
         treatments={treatments}
+        timingInfo={timingInfo}
       />
     );
   }
@@ -30,6 +32,7 @@ export function ServiceCard({
       bullets={bullets}
       startingPrice={startingPrice}
       treatments={treatments}
+      timingInfo={timingInfo}
     />
   );
 }

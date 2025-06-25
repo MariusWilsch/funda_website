@@ -6,19 +6,33 @@ import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      // Check if we've scrolled past the hero section
+      const heroSection = document.querySelector('section');
+      const heroBottom = heroSection ? heroSection.offsetHeight : window.innerHeight;
+      
       setIsScrolled(window.scrollY > 20);
+      setIsPastHero(window.scrollY > heroBottom - 100); // 100px before hero ends for smooth transition
     };
+    
+    handleScroll(); // Check initial state
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm transition-all duration-300">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isPastHero 
+        ? 'bg-background shadow-sm' 
+        : 'bg-transparent'
+    }`}>
       {/* Main Header */}
-      <div className="bg-white border-b border-warm-gray-200">
+      <div className={`transition-all duration-300 ${
+        isPastHero ? 'border-b border-warm-gray-200' : ''
+      }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={`flex items-center justify-between transition-all duration-300 ${
@@ -28,20 +42,20 @@ export function Header() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <a href="#" className="flex items-center">
-                <span
-                  className={`font-bold text-warm-gray-900 transition-all duration-300 ${
-                    isScrolled ? "text-xl lg:text-2xl" : "text-2xl lg:text-3xl"
+                <img
+                  src="/PrettyPointLogo.png"
+                  alt="The PrettyPoint Logo"
+                  className={`transition-all duration-300 ${
+                    isScrolled ? "h-8" : "h-12"
                   }`}
-                >
-                  The <span className="text-bordeaux-600">PrettyPoint</span>
-                </span>
+                />
               </a>
             </div>
 
             {/* Right Aligned Group */}
             <div className="flex items-center space-x-8">
               {/* Desktop Navigation */}
-              <Navigation />
+              <Navigation isTransparent={!isPastHero} />
 
               {/* Desktop CTA Button */}
               <div className="hidden md:flex">
