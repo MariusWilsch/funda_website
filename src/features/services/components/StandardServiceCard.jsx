@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ServiceDialog } from "./ServiceDialog";
 
 export function StandardServiceCard({
+  serviceType,
   title,
   description,
   startingPrice,
@@ -42,9 +43,7 @@ export function StandardServiceCard({
           </div>
 
           <div className="pt-4">
-            <ServiceDialog
-              service={{ title, description, startingPrice, timingInfo }}
-            >
+            <ServiceDialog serviceType={serviceType}>
               <Button
                 variant="ghost"
                 className="w-full text-bordeaux-600 hover:text-bordeaux-700 hover:bg-bordeaux-50 border border-bordeaux-200 hover:border-bordeaux-300 font-semibold"

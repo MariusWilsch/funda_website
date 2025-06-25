@@ -1,9 +1,16 @@
 export function Navigation({ isMobile = false, isTransparent = false }) {
   const navItems = [
     { label: "Behandlungen", href: "#services" },
-    { label: "Über uns", href: "#about" },
     { label: "Kontakt", href: "#contact" },
   ];
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const baseClasses = "transition-colors duration-200";
   const mobileClasses =
@@ -22,6 +29,7 @@ export function Navigation({ isMobile = false, isTransparent = false }) {
         <a
           key={item.label}
           href={item.href}
+          onClick={(e) => handleNavClick(e, item.href)}
           className={`${baseClasses} ${
             isMobile ? mobileClasses : desktopClasses
           }`}

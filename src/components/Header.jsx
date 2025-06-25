@@ -23,6 +23,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isPastHero 
@@ -41,7 +46,7 @@ export function Header() {
           >
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="#" className="flex items-center">
+              <a href="#" onClick={handleLogoClick} className="flex items-center">
                 <img
                   src="/PrettyPointLogo.png"
                   alt="The PrettyPoint Logo"

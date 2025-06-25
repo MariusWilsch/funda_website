@@ -147,6 +147,7 @@ export const servicesDialogData = {
     },
     pricingGroups: [
       {
+        groupTitle: "Gesicht & Hals",
         items: [
           { name: "Doppelkinn", basePrice: "179 €", note: "pro Sitzung" },
           {
@@ -159,6 +160,11 @@ export const servicesDialogData = {
             basePrice: "199 €",
             note: "pro Sitzung",
           },
+        ],
+      },
+      {
+        groupTitle: "Oberkörper",
+        items: [
           {
             name: "Oberarme (Winkearme)",
             basePrice: "239 €",
@@ -181,6 +187,16 @@ export const servicesDialogData = {
             note: "pro Sitzung",
           },
           {
+            name: "Rücken / BH-Röllchen",
+            basePrice: "229 €",
+            note: "pro Sitzung",
+          },
+        ],
+      },
+      {
+        groupTitle: "Beine",
+        items: [
+          {
             name: "Reiterhosen (Oberschenkel außen)",
             basePrice: "259 €",
             note: "pro Sitzung",
@@ -191,11 +207,6 @@ export const servicesDialogData = {
             note: "pro Sitzung",
           },
           { name: "Knieinnenseiten", basePrice: "169 €", note: "pro Sitzung" },
-          {
-            name: "Rücken / BH-Röllchen",
-            basePrice: "229 €",
-            note: "pro Sitzung",
-          },
         ],
       },
     ],

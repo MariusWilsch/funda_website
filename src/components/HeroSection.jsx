@@ -6,7 +6,7 @@ import heroBackground from "/Users/verdant/Documents/augment-projects/funda_webs
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 hero-fade-out">
       {/* Background Image and Overlay */}
       <div className="absolute inset-0">
         <img

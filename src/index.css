@@ -27,6 +27,17 @@
     line-height: 1.2 !important;
     letter-spacing: 0.5px !important;
   }
+
+  .hero-fade-out::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(to bottom, transparent, hsl(var(--background)));
+    pointer-events: none;
+  }
 }
 
 @layer components {

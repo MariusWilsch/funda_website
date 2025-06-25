@@ -2,6 +2,7 @@ import { FeaturedServiceCard } from "./FeaturedServiceCard";
 import { StandardServiceCard } from "./StandardServiceCard";
 
 export function ServiceCard({
+  serviceType,
   title,
   description,
   image,
@@ -14,6 +15,7 @@ export function ServiceCard({
   if (isFeatured) {
     return (
       <FeaturedServiceCard
+        serviceType={serviceType}
         title={title}
         description={description}
         image={image}
@@ -27,6 +29,7 @@ export function ServiceCard({
 
   return (
     <StandardServiceCard
+      serviceType={serviceType}
       title={title}
       description={description}
       bullets={bullets}

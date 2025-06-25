@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-// import { BookerEmbed } from '@calcom/atoms'
+import { BookerEmbed } from '@calcom/atoms'
 
 export function BookingButton({
   children = "Jetzt Termin buchen",
@@ -29,23 +29,19 @@ export function BookingButton({
           {children}
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl w-full h-[80vh] p-6">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <h2 className="text-2xl font-bold text-warm-gray-900">
-              Termin buchen
-            </h2>
-            <p className="text-warm-gray-600">
-              Cal.com Integration wird hier implementiert
-            </p>
-            <Button
-              onClick={() => setIsOpen(false)}
-              className="bg-bordeaux-500 hover:bg-bordeaux-600 text-white"
-            >
-              Schließen
-            </Button>
-          </div>
-        </div>
+      <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
+        <BookerEmbed
+          username="mariuswilsch"
+          eventSlug="coffee-break"
+          view="month_view"
+          customClassNames={{
+            bookerContainer: "border-none",
+          }}
+          onCreateBookingSuccess={() => {
+            console.log("booking created successfully");
+            setIsOpen(false);
+          }}
+        />
       </DialogContent>
     </Dialog>
   );

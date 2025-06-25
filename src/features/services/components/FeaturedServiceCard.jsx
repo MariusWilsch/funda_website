@@ -5,6 +5,7 @@ import { ServiceDialog } from "./ServiceDialog";
 import Image from "/Users/verdant/Documents/augment-projects/funda_website/public/Picture2.png";
 
 export function FeaturedServiceCard({
+  serviceType,
   title,
   description,
   startingPrice,
@@ -57,15 +58,7 @@ export function FeaturedServiceCard({
               </div>
             </div>
             <div className="pt-6">
-              <ServiceDialog
-                service={{
-                  title,
-                  description,
-                  startingPrice,
-                  treatments,
-                  timingInfo,
-                }}
-              >
+              <ServiceDialog serviceType={serviceType}>
                 <Button
                   variant="ghost"
                   className="w-full text-bordeaux-600 hover:text-bordeaux-700 hover:bg-bordeaux-50 border border-bordeaux-200 hover:border-bordeaux-300 font-semibold"

@@ -72,18 +72,18 @@ export function ContactSection() {
             </InfoCard>
 
             <InfoCard title="Kontaktinformationen" icon={MapPin}>
-              <div className="space-y-4">
+              <div className="flex flex-col space-y-6">
                 <div>
-                  <p className="font-semibold text-warm-gray-900">
+                  <p className="font-semibold text-warm-gray-900 mb-1">
                     Praxisadresse
                   </p>
-                  <p>
+                  <p className="!mb-0">
                     {siteData.contact.address.street},{" "}
                     {siteData.contact.address.city}
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-warm-gray-900">Telefon</p>
+                  <p className="font-semibold text-warm-gray-900 mb-1">Telefon</p>
                   <a
                     href={`tel:${siteData.contact.phone.replace(/\s/g, "")}`}
                     className="text-bordeaux-600 hover:text-bordeaux-700 transition-colors"
@@ -92,7 +92,7 @@ export function ContactSection() {
                   </a>
                 </div>
                 <div>
-                  <p className="font-semibold text-warm-gray-900">E-Mail</p>
+                  <p className="font-semibold text-warm-gray-900 mb-1">E-Mail</p>
                   <a
                     href={`mailto:${siteData.contact.email}`}
                     className="text-bordeaux-600 hover:text-bordeaux-700 transition-colors"
