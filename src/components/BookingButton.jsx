@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { BookerEmbed } from '@calcom/atoms'
+import { BookerEmbed } from '@calcom/atoms';
 
 export function BookingButton({
   children = "Jetzt Termin buchen",
