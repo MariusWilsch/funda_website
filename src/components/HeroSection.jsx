@@ -51,7 +51,7 @@ export function HeroSection() {
             size="2xl"
             calLink="mariuswilsch/coffee-break"
             className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
-            text-xl font-bold px-12 py-6 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
+            text-base md:text-xl font-bold px-6 md:px-12 py-4 md:py-6 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
           >
             Bereit für deinen PrettyPoint-Moment?
           </BookingButton>

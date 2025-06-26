@@ -15,8 +15,9 @@ export function FeaturedServiceCard({
 }) {
   return (
     <Card className="h-full rounded-xl border-t-8 border-t-bordeaux-600 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden">
-      <div className="grid md:grid-cols-2 h-full">
-        <div className="relative hidden md:block">
+      {/* Desktop: Featured layout with image */}
+      <div className="hidden md:grid md:grid-cols-2 h-full">
+        <div className="relative">
           <OptimizedImage
             src={featuredImage}
             alt={title}
@@ -70,6 +71,54 @@ export function FeaturedServiceCard({
             </div>
           </CardContent>
         </div>
+      </div>
+
+      {/* Mobile: Standard service card layout */}
+      <div className="md:hidden flex flex-col p-6 text-center bg-[#FFFDFB]">
+        <CardHeader className="pb-4 px-0">
+          <div className="space-y-2">
+            <CardTitle className="text-2xl font-bold text-warm-gray-900 leading-tight">
+              {title}
+            </CardTitle>
+            {/* Red underline decoration */}
+            <div className="w-24 h-0.5 bg-bordeaux-600 mx-auto"></div>
+            <div className="text-bordeaux-600 font-semibold text-3xl pt-2">
+              ab {startingPrice}
+            </div>
+            <span className="text-xs text-warm-gray-600 font-medium">
+              Meistgebuchte Behandlung
+            </span>
+          </div>
+        </CardHeader>
+
+        <CardContent className="flex-1 flex flex-col pt-0 px-0 space-y-4">
+          <div className="px-2">
+            <p className="text-base text-warm-gray-600 font-normal leading-relaxed">
+              {description}
+            </p>
+          </div>
+
+          {/* Treatment timing information */}
+          <div className="flex items-center justify-center text-[#666] text-xs">
+            <span>
+              {timingInfo &&
+                [timingInfo.duration, timingInfo.results, timingInfo.longevity]
+                  .filter(Boolean)
+                  .join(" | ")}
+            </span>
+          </div>
+
+          <div className="pt-4">
+            <ServiceDialog serviceType={serviceType}>
+              <Button
+                variant="ghost"
+                className="w-full text-bordeaux-600 hover:text-bordeaux-700 hover:bg-bordeaux-50 border border-bordeaux-200 hover:border-bordeaux-300 font-semibold"
+              >
+                Details & Preise
+              </Button>
+            </ServiceDialog>
+          </div>
+        </CardContent>
       </div>
     </Card>
   );
