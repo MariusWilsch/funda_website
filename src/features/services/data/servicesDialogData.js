@@ -92,6 +92,7 @@ export const servicesDialogData = {
       "Ergebnisse können individuell variieren – eine Erfolgsgarantie ist nicht möglich.",
     ],
     ctaButtonText: "Jetzt Termin buchen",
+    calLink: "mariuswilsch/coffee-break",
   },
 
   hyaluron: {
@@ -131,6 +132,7 @@ export const servicesDialogData = {
       "Preise gelten ab dem angegebenen Betrag.",
     ],
     ctaButtonText: "Jetzt Termin buchen",
+    calLink: "mariuswilsch/coffee-break",
   },
 
   lipolyse: {
@@ -218,6 +220,7 @@ export const servicesDialogData = {
       "Die Kosten für die Beratung betragen 20 Euro.",
     ],
     ctaButtonText: "Jetzt Beratungstermin sichern",
+    calLink: "mariuswilsch/coffee-break",
   },
 
   prp: {
@@ -268,6 +271,7 @@ export const servicesDialogData = {
       "Die Kosten für die Beratung betragen 20 Euro.",
     ],
     ctaButtonText: "Jetzt Termin sichern",
+    calLink: "mariuswilsch/coffee-break",
   },
 };
 

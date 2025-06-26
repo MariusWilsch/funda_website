@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/BookingButton";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Accordion,
@@ -49,14 +49,6 @@ export function ServiceDialog({ serviceType, children }) {
   // Shared content component
   const ServiceContent = ({ isMobile = false }) => (
     <div className={`${isMobile ? "space-y-8" : "space-y-12"}`}>
-      {/* Header */}
-      <div className={`${isMobile ? "pb-6" : "pb-8"}`}>
-        <h2 className="text-2xl font-bold text-foreground uppercase card-title-serif">
-          {serviceData.title} – {serviceData.subtitle}
-        </h2>
-        <div className="w-full h-px bg-primary mt-4" />
-      </div>
-
       {/* Description */}
       <div
         className={`${
@@ -229,13 +221,14 @@ export function ServiceDialog({ serviceType, children }) {
       </div>
 
       {/* CTA Button */}
-      <Button
+      <BookingButton
+        calLink={serviceData.calLink}
         className={`w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold ${
           isMobile ? "py-4 text-base" : "py-6 text-lg"
         } shadow-lg hover:shadow-xl transition-all duration-200`}
       >
         {serviceData.ctaButtonText}
-      </Button>
+      </BookingButton>
     </div>
   );
 

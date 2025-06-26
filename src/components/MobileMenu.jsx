@@ -44,6 +44,7 @@ export function MobileMenu() {
               variant="primary"
               size="lg"
               className="w-full"
+              calLink="mariuswilsch/coffee-break"
               onClick={() => setIsOpen(false)}
             >
               Termin buchen

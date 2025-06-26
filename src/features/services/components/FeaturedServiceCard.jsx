@@ -2,7 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ServiceDialog } from "./ServiceDialog";
-import Image from "/Users/verdant/Documents/augment-projects/funda_website/public/Picture2.png";
+import OptimizedImage from "@/components/ui/OptimizedImage";
+import featuredImage from "@/assets/FeaturedServiceLogo.png";
 
 export function FeaturedServiceCard({
   serviceType,
@@ -16,8 +17,8 @@ export function FeaturedServiceCard({
     <Card className="h-full rounded-xl border-t-8 border-t-bordeaux-600 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden">
       <div className="grid md:grid-cols-2 h-full">
         <div className="relative hidden md:block">
-          <img
-            src={Image}
+          <OptimizedImage
+            src={featuredImage}
             alt={title}
             className="absolute h-full w-full object-cover"
           />

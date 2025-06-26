@@ -1,15 +1,15 @@
 import { BookingButton } from "./BookingButton";
 import { Button } from "@/components/ui/button";
 import { Cross } from "lucide-react";
-// Import image from public folder
-import heroBackground from "/Users/verdant/Documents/augment-projects/funda_website/public/CandidPhotographyNaturalTextures.png"; // Assuming the image is in public/hero-background.jpg
+import OptimizedImage from "@/components/ui/OptimizedImage";
+import heroBackground from "@/assets/HeroPicture.png";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 hero-fade-out">
       {/* Background Image and Overlay */}
       <div className="absolute inset-0">
-        <img
+        <OptimizedImage
           src={heroBackground}
           alt="Aesthetic medicine background"
           className="h-full w-full object-cover"
@@ -49,7 +49,8 @@ export function HeroSection() {
           <BookingButton
             variant="primary"
             size="2xl"
-            className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 
+            calLink="mariuswilsch/coffee-break"
+            className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
             text-xl font-bold px-12 py-6 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
           >
             Bereit für deinen PrettyPoint-Moment?

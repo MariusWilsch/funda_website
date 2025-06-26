@@ -29,7 +29,7 @@
   }
 
   .hero-fade-out::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -138,5 +138,26 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Cal.com Modal Sizing - Increase dimensions for better user experience */
+@layer components {
+  /* Target Cal.com modal containers and iframes */
+  [data-cal-namespace] iframe,
+  .cal-embed-modal,
+  [data-cal-link] + div iframe {
+    width: 90vw !important;
+    height: 85vh !important;
+    max-width: 1000px !important;
+    max-height: 800px !important;
+    min-width: 600px !important;
+    min-height: 500px !important;
+  }
+
+  /* Ensure modal backdrop and positioning */
+  [data-cal-namespace],
+  .cal-embed-modal-backdrop {
+    z-index: 9999 !important;
   }
 }

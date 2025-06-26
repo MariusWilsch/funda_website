@@ -14,6 +14,7 @@ export const serviceCardData = [
       results: "Ab Tag 3",
       longevity: "3-5 Monate",
     },
+    calLink: "mariuswilsch/coffee-break",
   },
 
   // Hyaluron Service (Standard - index 1)
@@ -28,6 +29,7 @@ export const serviceCardData = [
       results: "Sofort sichtbar",
       longevity: "6-18 Monate",
     },
+    calLink: "mariuswilsch/coffee-break",
   },
 
   // Lipolyse Service (Standard - index 2)
@@ -42,6 +44,7 @@ export const serviceCardData = [
       results: "Ab Woche 1",
       longevity: "Dauerhaft",
     },
+    calLink: "mariuswilsch/coffee-break",
   },
 
   // PRP Service (Standard - index 3)
@@ -56,5 +59,6 @@ export const serviceCardData = [
       results: "Ab Woche 2",
       longevity: "6-12 Monate",
     },
+    calLink: "mariuswilsch/coffee-break",
   },
 ];
