@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Navigation } from "./Navigation";
 import { BookingButton } from "./BookingButton";
+import OptimizedImage from "@/components/ui/OptimizedImage";
+import logoBlack from "@/assets/LogoBlack.png";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,23 +34,25 @@ export function MobileMenu() {
                 className="flex items-center"
                 onClick={() => setIsOpen(false)}
               >
-                <span className="text-2xl font-bold text-warm-gray-900">
-                  The <span className="text-bordeaux-600">PrettyPoint</span>
-                </span>
+                <OptimizedImage
+                  src={logoBlack}
+                  alt="The PrettyPoint Logo"
+                  className="w-40 h-auto"
+                />
               </a>
             </div>
-            <Navigation isMobile={true} />
+            <Navigation
+              isMobile={true}
+              onNavItemClick={() => setIsOpen(false)}
+            />
           </div>
           <div className="pt-6 border-t border-warm-gray-200">
             <BookingButton
               variant="primary"
               size="lg"
               className="w-full"
-              calLink="mariuswilsch/coffee-break"
               onClick={() => setIsOpen(false)}
-            >
-              Termin buchen
-            </BookingButton>
+            />
           </div>
         </div>
       </SheetContent>

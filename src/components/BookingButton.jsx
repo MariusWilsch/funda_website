@@ -1,15 +1,48 @@
 import { Button } from "@/components/ui/button";
 
 export function BookingButton({
-  children = "Jetzt Termin buchen",
+  children = "Jetzt buchen",
   variant = "primary",
   size = "lg",
   className = "",
-  calLink,
+  onClick,
+  onModalClose,
 }) {
+  const handleBookingClick = (e) => {
+    e.preventDefault();
+
+    // Close modal first (if provided)
+    if (onModalClose) {
+      onModalClose();
+      console.log("📍 [BookingButton] Closing modal before scroll");
+    }
+
+    // Scroll to booking section smoothly
+    const bookingSection = document.getElementById("booking-section");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      console.log("📍 [BookingButton] Scrolling to booking section");
+
+      // Add a subtle highlight effect after scrolling
+      setTimeout(() => {
+        bookingSection.style.transform = "scale(1.01)";
+        bookingSection.style.transition = "transform 0.3s ease";
+        setTimeout(() => {
+          bookingSection.style.transform = "scale(1)";
+        }, 300);
+      }, 800); // Wait for scroll to complete
+    }
+
+    // Call any additional onClick handler
+    onClick?.(e);
+  };
+
   return (
     <Button
-      data-cal-link={calLink}
+      onClick={handleBookingClick}
       className={`
         ${
           variant === "primary"
@@ -17,7 +50,7 @@ export function BookingButton({
             : "bg-white border-2 border-bordeaux-500 text-bordeaux-500 hover:bg-bordeaux-50"
         }
         ${size === "lg" ? "px-8 py-4 text-lg" : "px-6 py-3 text-base"}
-        font-semibold rounded-md transition-all duration-200
+        font-semibold rounded-md transition-all duration-200 cursor-pointer
         ${className}
       `}
     >

@@ -47,7 +47,7 @@ export function ServiceDialog({ serviceType, children }) {
   }
 
   // Shared content component
-  const ServiceContent = ({ isMobile = false }) => (
+  const ServiceContent = ({ isMobile = false, closeModal }) => (
     <div className={`${isMobile ? "space-y-8" : "space-y-12"}`}>
       {/* Description */}
       <div
@@ -222,7 +222,7 @@ export function ServiceDialog({ serviceType, children }) {
 
       {/* CTA Button */}
       <BookingButton
-        calLink={serviceData.calLink}
+        onModalClose={closeModal}
         className={`w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold ${
           isMobile ? "py-4 text-base" : "py-6 text-lg"
         } shadow-lg hover:shadow-xl transition-all duration-200`}
@@ -247,7 +247,7 @@ export function ServiceDialog({ serviceType, children }) {
             </SheetTitle>
             <div className="w-full h-px bg-primary mt-4" />
           </SheetHeader>
-          <ServiceContent isMobile={true} />
+          <ServiceContent isMobile={true} closeModal={() => setOpen(false)} />
         </SheetContent>
       </Sheet>
     );
@@ -263,7 +263,7 @@ export function ServiceDialog({ serviceType, children }) {
           </DialogTitle>
           <div className="w-full h-px bg-primary mt-4" />
         </DialogHeader>
-        <ServiceContent isMobile={false} />
+        <ServiceContent isMobile={false} closeModal={() => setOpen(false)} />
       </DialogContent>
     </Dialog>
   );

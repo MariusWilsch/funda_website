@@ -51,29 +51,29 @@ export const servicesDialogData = {
       {
         groupTitle: "Gesichtsbehandlungen",
         items: [
-          { name: "Stirnfalten (glätten)", basePrice: "199 €" },
-          { name: "Zornesfalten (Glabella)", basePrice: "199 €" },
-          { name: "Krähenfüße (seitliche Augenfalten)", basePrice: "199 €" },
-          { name: "Nasenfalten / Bunny Lines", basePrice: "179 €" },
-          { name: "Heben der Augenbrauen (Brow Lift)", basePrice: "269 €" },
-          { name: "Lippenfältchen (Perioral)", basePrice: "219 €" },
-          { name: "Lip Flip (Lippenhebung)", basePrice: "179 €" },
+          { name: "Stirnfalten (glätten)", basePrice: "ab 199 €" },
+          { name: "Zornesfalten (Glabella)", basePrice: "ab 199 €" },
+          { name: "Krähenfüße (seitliche Augenfalten)", basePrice: "ab 199 €" },
+          { name: "Nasenfalten / Bunny Lines", basePrice: "ab 179 €" },
+          { name: "Heben der Augenbrauen (Brow Lift)", basePrice: "ab 269 €" },
+          { name: "Lippenfältchen (Perioral)", basePrice: "ab 219 €" },
+          { name: "Lip Flip (Lippenhebung)", basePrice: "ab 179 €" },
         ],
       },
       {
         groupTitle: "Hals & Kiefer",
         items: [
-          { name: "Halsfalten (Platysma)", basePrice: "299 €" },
-          { name: "Kiefer (Masseter) Entspannung", basePrice: "329 €" },
-          { name: "Nefertiti Lift (Hals & Kinnkontur)", basePrice: "299 €" },
+          { name: "Halsfalten (Platysma)", basePrice: "ab 299 €" },
+          { name: "Kiefer (Masseter) Entspannung", basePrice: "ab 329 €" },
+          { name: "Nefertiti Lift (Hals & Kinnkontur)", basePrice: "ab 299 €" },
         ],
       },
       {
         groupTitle: "Medizinische Anwendungen",
         items: [
-          { name: "Bruxismus (Zähneknirschen)", basePrice: "379 €" },
-          { name: "Hyperhidrose Achseln", basePrice: "399 €" },
-          { name: "Hyperhidrose Hände", basePrice: "429 €" },
+          { name: "Bruxismus (Zähneknirschen)", basePrice: "ab 379 €" },
+          { name: "Hyperhidrose Achseln", basePrice: "ab 399 €" },
+          { name: "Hyperhidrose Hände", basePrice: "ab 429 €" },
         ],
       },
       {
@@ -81,9 +81,9 @@ export const servicesDialogData = {
         items: [
           {
             name: "3 Zonen Botox (Stirn, Glabella, Krähenfüße)",
-            basePrice: "399 €",
+            basePrice: "ab 399 €",
           },
-          { name: "2 Zonen Botox", basePrice: "289 €" },
+          { name: "2 Zonen Botox", basePrice: "ab 289 €" },
         ],
       },
     ],
@@ -92,7 +92,6 @@ export const servicesDialogData = {
       "Ergebnisse können individuell variieren – eine Erfolgsgarantie ist nicht möglich.",
     ],
     ctaButtonText: "Jetzt Termin buchen",
-    calLink: "mariuswilsch/coffee-break",
   },
 
   hyaluron: {
@@ -113,17 +112,17 @@ export const servicesDialogData = {
           {
             name: "Lippen",
             priceOptions: [
-              { label: "0,5 ml", price: "249 €" },
-              { label: "1 ml (Modellierung)", price: "319 €" },
+              { label: "0,5 ml", price: "ab 249 €" },
+              { label: "1 ml (Modellierung)", price: "ab 319 €" },
             ],
           },
-          { name: "Nasolabialfalten", basePrice: "299 €" },
-          { name: "Marionettenfalten", basePrice: "289 €" },
-          { name: "Jawline / Kinnlinie", basePrice: "389 €" },
-          { name: "Kinnaufbau", basePrice: "349 €" },
-          { name: "Wangen / Midface Volumen", basePrice: "399 €" },
-          { name: "Tränenrinne (Tear Trough)", basePrice: "359 €" },
-          { name: "Nasenkorrektur (ohne OP)", basePrice: "429 €" },
+          { name: "Nasolabialfalten", basePrice: "ab 299 €" },
+          { name: "Marionettenfalten", basePrice: "ab 289 €" },
+          { name: "Jawline / Kinnlinie", basePrice: "ab 389 €" },
+          { name: "Kinnaufbau", basePrice: "ab 349 €" },
+          { name: "Wangen / Midface Volumen", basePrice: "ab 399 €" },
+          { name: "Tränenrinne (Tear Trough)", basePrice: "ab 359 €" },
+          { name: "Nasenkorrektur (ohne OP)", basePrice: "ab 429 €" },
         ],
       },
     ],
@@ -132,7 +131,6 @@ export const servicesDialogData = {
       "Preise gelten ab dem angegebenen Betrag.",
     ],
     ctaButtonText: "Jetzt Termin buchen",
-    calLink: "mariuswilsch/coffee-break",
   },
 
   lipolyse: {
@@ -151,15 +149,15 @@ export const servicesDialogData = {
       {
         groupTitle: "Gesicht & Hals",
         items: [
-          { name: "Doppelkinn", basePrice: "179 €", note: "pro Sitzung" },
+          { name: "Doppelkinn", basePrice: "ab 179 €", note: "pro Sitzung" },
           {
             name: "Unteres Gesicht (Jawline, Hamsterbäckchen)",
-            basePrice: "199 €",
+            basePrice: "ab 199 €",
             note: "pro Sitzung",
           },
           {
             name: "Wangen / seitliches Gesichtsfett",
-            basePrice: "199 €",
+            basePrice: "ab 199 €",
             note: "pro Sitzung",
           },
         ],
@@ -169,28 +167,28 @@ export const servicesDialogData = {
         items: [
           {
             name: "Oberarme (Winkearme)",
-            basePrice: "239 €",
+            basePrice: "ab 239 €",
             note: "pro Sitzung",
           },
-          { name: "Achselfalten", basePrice: "189 €", note: "pro Sitzung" },
+          { name: "Achselfalten", basePrice: "ab 189 €", note: "pro Sitzung" },
           {
             name: "Bauch (kleine Zone)",
-            basePrice: "229 €",
+            basePrice: "ab 229 €",
             note: "pro Sitzung",
           },
           {
             name: "Bauch (größere Zone)",
-            basePrice: "299 €",
+            basePrice: "ab 299 €",
             note: "pro Sitzung",
           },
           {
             name: "Hüftspeck / Love Handles",
-            basePrice: "249 €",
+            basePrice: "ab 249 €",
             note: "pro Sitzung",
           },
           {
             name: "Rücken / BH-Röllchen",
-            basePrice: "229 €",
+            basePrice: "ab 229 €",
             note: "pro Sitzung",
           },
         ],
@@ -200,15 +198,15 @@ export const servicesDialogData = {
         items: [
           {
             name: "Reiterhosen (Oberschenkel außen)",
-            basePrice: "259 €",
+            basePrice: "ab 259 €",
             note: "pro Sitzung",
           },
           {
             name: "Oberschenkel innen",
-            basePrice: "249 €",
+            basePrice: "ab 249 €",
             note: "pro Sitzung",
           },
-          { name: "Knieinnenseiten", basePrice: "169 €", note: "pro Sitzung" },
+          { name: "Knieinnenseiten", basePrice: "ab 169 €", note: "pro Sitzung" },
         ],
       },
     ],
@@ -220,7 +218,6 @@ export const servicesDialogData = {
       "Die Kosten für die Beratung betragen 20 Euro.",
     ],
     ctaButtonText: "Jetzt Beratungstermin sichern",
-    calLink: "mariuswilsch/coffee-break",
   },
 
   prp: {
@@ -240,27 +237,27 @@ export const servicesDialogData = {
         items: [
           {
             name: "Kopfhaut (Haarwachstum)",
-            basePrice: "199 €",
+            basePrice: "ab 199 €",
             note: "Einstiegspreis – Vertrauen aufbauen",
           },
           {
             name: "Kopfhaut 3er-Paket",
-            basePrice: "549 €",
+            basePrice: "ab 549 €",
             note: "Paketpreis – ca. 8% Ersparnis",
           },
           {
             name: "Kopfhaut 5er-Paket",
-            basePrice: "879 €",
+            basePrice: "ab 879 €",
             note: "Paketpreis – ca. 12% Ersparnis",
           },
           {
             name: "Gesicht (Anti-Aging & Hautbild)",
-            basePrice: "219 €",
+            basePrice: "ab 219 €",
             note: "Effektiv, fair und hochwertig",
           },
           {
             name: "Gesicht + Dekolleté",
-            basePrice: "289 €",
+            basePrice: "ab 289 €",
             note: "Kombi-Paket, Mehr spürbar",
           },
         ],
@@ -271,7 +268,6 @@ export const servicesDialogData = {
       "Die Kosten für die Beratung betragen 20 Euro.",
     ],
     ctaButtonText: "Jetzt Termin sichern",
-    calLink: "mariuswilsch/coffee-break",
   },
 };
 

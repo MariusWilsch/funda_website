@@ -5,7 +5,6 @@ import { Navigation } from "./Navigation";
 import { MobileMenu } from "./MobileMenu";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import logoBlack from "@/assets/LogoBlack.png";
-import logoWhite from "@/assets/LogoWhite.png";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,28 +47,16 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={`flex items-center justify-between transition-all duration-300 ${
-              isScrolled ? "py-2" : "py-4"
-            }`}
+              isScrolled ? "h-20" : "h-32"
+            } py-2`}
           >
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a
-                href="#"
-                onClick={handleLogoClick}
-                className="flex items-center"
-              >
+              <a href="#" onClick={handleLogoClick}>
                 <OptimizedImage
-                  src={isPastHero ? logoBlack : logoWhite}
+                  src={logoBlack}
                   alt="The PrettyPoint Logo"
-                  className={`transition-all duration-300 ${
-                    isPastHero
-                      ? isScrolled
-                        ? "h-8"
-                        : "h-12"
-                      : isScrolled
-                      ? "h-16"
-                      : "h-20"
-                  }`}
+                  className={`transition-all duration-300 w-32 md:w-40 h-auto`}
                 />
               </a>
             </div>
@@ -77,17 +64,14 @@ export function Header() {
             {/* Right Aligned Group */}
             <div className="flex items-center space-x-8">
               {/* Desktop Navigation */}
-              <Navigation isTransparent={!isPastHero} />
+              <Navigation />
 
               {/* Desktop CTA Button */}
               <div className="hidden md:flex">
                 <BookingButton
                   variant="primary"
                   size={isScrolled ? "default" : "lg"}
-                  calLink="mariuswilsch/coffee-break"
-                >
-                  Termin buchen
-                </BookingButton>
+                />
               </div>
 
               {/* Mobile Menu */}

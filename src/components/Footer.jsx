@@ -33,13 +33,7 @@ export function Footer() {
             Buchen Sie jetzt Ihren persönlichen Beratungstermin in unserer
             Praxis in Berlin.
           </p>
-          <BookingButton
-            variant="primary"
-            size="xl"
-            calLink="mariuswilsch/coffee-break"
-          >
-            Termin online buchen
-          </BookingButton>
+          <BookingButton variant="primary" size="xl" />
         </div>
 
         {/* Main Footer Content */}

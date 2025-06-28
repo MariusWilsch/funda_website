@@ -2,7 +2,7 @@ import { BookingButton } from "./BookingButton";
 import { Button } from "@/components/ui/button";
 import { Cross } from "lucide-react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
-import heroBackground from "@/assets/HeroPicture.png";
+import heroBackground from "@/assets/HeroPicture.jpeg";
 
 export function HeroSection() {
   return (
@@ -12,10 +12,10 @@ export function HeroSection() {
         <OptimizedImage
           src={heroBackground}
           alt="Aesthetic medicine background"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
       </div>
 
       {/* Content */}
@@ -49,11 +49,17 @@ export function HeroSection() {
           <BookingButton
             variant="primary"
             size="2xl"
-            calLink="mariuswilsch/coffee-break"
             className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
-            text-base md:text-xl font-bold px-6 md:px-12 py-4 md:py-6 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
+            text-base md:text-xl font-bold px-8 md:px-16 py-6 md:py-8 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
           >
-            Bereit für deinen PrettyPoint-Moment?
+            <div className="text-center">
+              <div className="text-base md:text-xl font-bold leading-tight">
+                Bereit für deinen PrettyPoint-Moment?
+              </div>
+              <div className="text-sm md:text-base mt-2 opacity-90 font-medium text-center">
+                Jetzt buchen
+              </div>
+            </div>
           </BookingButton>
           <Button
             asChild

@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ServiceDialog } from "./ServiceDialog";
 import OptimizedImage from "@/components/ui/OptimizedImage";
-import featuredImage from "@/assets/FeaturedServiceLogo.png";
+import featuredImage from "@/assets/FeaturedServiceLogo.jpeg";
 
 export function FeaturedServiceCard({
   serviceType,
@@ -22,6 +22,9 @@ export function FeaturedServiceCard({
             src={featuredImage}
             alt={title}
             className="absolute h-full w-full object-cover"
+            style={{
+              objectPosition: "center 20%",
+            }}
           />
         </div>
         <div className="flex flex-col p-10">
