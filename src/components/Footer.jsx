@@ -24,18 +24,6 @@ export function Footer() {
   return (
     <footer className="bg-warm-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* CTA Section */}
-        <div className="py-12 text-center border-b border-warm-gray-800">
-          <h2 className="text-3xl font-bold mb-4">
-            Bereit für den nächsten Schritt?
-          </h2>
-          <p className="text-lg text-warm-gray-300 max-w-2xl mx-auto mb-8">
-            Buchen Sie jetzt Ihren persönlichen Beratungstermin in unserer
-            Praxis in Berlin.
-          </p>
-          <BookingButton variant="primary" size="xl" />
-        </div>
-
         {/* Main Footer Content */}
         <div className="py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* About Column */}
@@ -70,14 +58,6 @@ export function Footer() {
             ))}
           </FooterColumn>
 
-          {/* Practice Column */}
-          <FooterColumn title="Praxis">
-            {practiceLinks.map((link) => (
-              <FooterLink key={link.name} href={link.href}>
-                {link.name}
-              </FooterLink>
-            ))}
-          </FooterColumn>
 
           {/* Legal Column */}
           <FooterColumn title="Rechtliches">
@@ -86,6 +66,18 @@ export function Footer() {
                 {link.name}
               </FooterLink>
             ))}
+          </FooterColumn>
+
+          {/* Opening Hours Column */}
+          <FooterColumn title="Öffnungszeiten">
+            <p className="text-warm-gray-300">
+              Montag - Freitag: 9:00 - 18:00 Uhr
+            </p>
+            <p className="text-warm-gray-300">Samstag: 9:00 - 14:00 Uhr</p>
+            <p className="text-warm-gray-300">Sonntag: Geschlossen</p>
+            <p className="text-sm text-warm-gray-400 pt-2">
+              Termine nur nach Vereinbarung
+            </p>
           </FooterColumn>
         </div>
 

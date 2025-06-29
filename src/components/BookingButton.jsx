@@ -15,7 +15,7 @@ export function BookingButton({
     if (onModalClose) {
       onModalClose();
       console.log("📍 [BookingButton] Closing modal before scroll");
-    }
+    } 
 
     // Scroll to booking section smoothly
     const bookingSection = document.getElementById("booking-section");
@@ -46,11 +46,11 @@ export function BookingButton({
       className={`
         ${
           variant === "primary"
-            ? "bg-bordeaux-500 hover:bg-bordeaux-600 text-white shadow-medium"
+            ? "bg-bordeaux-500 hover:bg-bordeaux-600 text-white shadow-lg hover:shadow-xl"
             : "bg-white border-2 border-bordeaux-500 text-bordeaux-500 hover:bg-bordeaux-50"
         }
-        ${size === "lg" ? "px-8 py-4 text-lg" : "px-6 py-3 text-base"}
-        font-semibold rounded-md transition-all duration-200 cursor-pointer
+        ${size === "lg" ? "px-10 py-5 text-xl" : "px-6 py-3 text-base"}
+        font-semibold rounded-md transition-all duration-300 cursor-pointer transform hover:scale-105
         ${className}
       `}
     >

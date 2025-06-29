@@ -1,235 +1,237 @@
-import { useState } from "react";
+import { Phone, Mail, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { siteData } from "@/data/siteData";
+import { BookingButton } from "./BookingButton";
 
-const InfoCard = ({ icon: Icon, title, children }) => (
-  <div className="bg-card p-8 rounded-lg">
-    <div className="flex items-center space-x-4 mb-6">
-      {Icon && <Icon className="h-7 w-7 text-bordeaux-500" />}
-      <h3 className="text-2xl font-bold text-warm-gray-900">{title}</h3>
-    </div>
-    <div className="text-warm-gray-700 leading-relaxed">{children}</div>
-  </div>
-);
+// Data is now inlined and restructured
+const contactData = {
+  heading: "Kontakt & Beratung",
+  leftColumn: {
+    welcome: {
+      title: "Willkommen bei The PrettyPoint",
+      subtitle: "wo moderne Ästhetik auf medizinische Exzellenz trifft.",
+    },
+    section1: {
+      p1: "Du wünschst dir Ergebnisse, die nicht gemacht, sondern einfach gut aussehen?",
+    },
+    quote: "„Weil echte Schönheit keine Schablone braucht.",
+    section2: {
+      headline: "Individuelle Beratung für natürliche Ergebnisse",
+      body: "Bei The PrettyPoint erwarten dich keine Standards, sondern maßgeschneiderte Behandlungen, die dich in deinem natürlichen Glow bestärken. Wir hören zu, schauen genau hin – und arbeiten mit einem geschulten Auge, ruhiger Hand und fundierter medizinischer Expertise.",
+    },
+    section3: {
+      headline: "Minimaler Eingriff. Maximale Wirkung.",
+      body: "Ob Babybotox, sanfte Hyaluron-Akzente oder exklusive Signature-Behandlungen – bei uns trifft höchste Qualität auf Ästhetik mit Feingefühl.",
+    },
+    section4: {
+      headline: "100% ärztlich geführt. 100% Vertrauenssache.",
+      body: "Du wirst ausschließlich von einer erfahrenen Ärztin behandelt – mit Präzision, Transparenz und einem Ziel: Deine natürliche Ausstrahlung zu betonen – nicht zu verändern.",
+    },
+    callToAction: {
+      title: "Bereit für Ihren PrettyPoint-Moment?",
+      subtitle:
+        "Jetzt Termin sichern – und erleben, wie sich medizinische Ästhetik richtig gut anfühlen kann.",
+    },
+  },
+  rightColumn: {
+    quickContact: {
+      title: "Sofort kontaktieren",
+      subtitle: "Schnell, einfach, persönlich",
+      benefits: [
+        "Antwort am selben Tag garantiert",
+        "Persönliche Beratung",
+        "Direkte Terminbuchung",
+        "Diskret und vertraulich",
+      ],
+      whatsappButton: {
+        text: "WhatsApp Chat starten",
+        phoneNumber: "+4915778527430",
+      },
+    },
+    doctorInfo: {
+      name: "Dr. med. Sarah Müller",
+      title: "Fachärztin für Ästhetische Medizin",
+      contact: {
+        address: "Hefnersteig 1, 13629 Berlin",
+        phone: "0157 78527430",
+        email: "info@theprettypoint.de",
+        instagram: "@the_prettypoint_berlin",
+      },
+    },
+  },
+};
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    treatment: "",
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
+  const { heading, leftColumn, rightColumn } = contactData;
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl lg:text-4xl font-bold text-warm-gray-900 mb-4">
-            Kontakt & Praxis
-          </h2>
-          <p className="text-lg text-warm-gray-600 max-w-2xl mx-auto">
-            Vereinbaren Sie Ihren persönlichen Beratungstermin oder kontaktieren
-            Sie uns für weitere Informationen
-          </p>
-        </div>
-
-        <Separator className="mb-12 bg-bordeaux-500" />
+    <section
+      id="contact"
+      className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Main Heading */}
+        <h2 className="text-5xl font-bold text-foreground mb-20 text-center leading-tight tracking-tight">
+          {heading}
+        </h2>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Practice Information */}
-          <div className="space-y-12">
-            <InfoCard title="Dr. med. Sarah Müller">
-              <p className="text-lg text-bordeaux-600 font-semibold mb-4">
-                Fachärztin für Ästhetische Medizin
-              </p>
-              <p>
-                Über 12 Jahre Erfahrung in der ästhetischen Medizin.
-                Zertifiziert durch die Deutsche Gesellschaft für Ästhetische
-                Medizin (DGÄM).
-              </p>
-            </InfoCard>
+        <div className="grid lg:grid-cols-[70%_30%] gap-16 lg:gap-20">
+          {/* Left Column Wrapper */}
+          <div className="flex flex-col gap-8">
+            {/* Main Content Card */}
+            <div className="bg-background rounded-2xl p-8 lg:p-12 border border-muted shadow-sm">
+              <div className="space-y-8">
+                {/* Welcome Section */}
+                <div className="text-center">
+                  <h3 className="text-3xl font-bold text-foreground mb-4 leading-snug tracking-tight">
+                    {leftColumn.welcome.title}
+                  </h3>
 
-            <InfoCard title="Kontaktinformationen" icon={MapPin}>
-              <div className="flex flex-col space-y-6">
-                <div>
-                  <p className="font-semibold text-warm-gray-900 mb-1">
-                    Praxisadresse
+                  <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                    {leftColumn.welcome.subtitle}
                   </p>
-                  <p className="!mb-0">
-                    {siteData.contact.address.street},{" "}
-                    {siteData.contact.address.city}
+                  <Separator className="w-24 mx-auto bg-bordeaux-500" />
+                </div>
+                {/* Section 2 */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-foreground leading-snug">
+                    {leftColumn.section2.headline}
+                  </h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {leftColumn.section2.body}
                   </p>
                 </div>
-                <div>
-                  <p className="font-semibold text-warm-gray-900 mb-1">Telefon</p>
-                  <a
-                    href={`tel:${siteData.contact.phone.replace(/\s/g, "")}`}
-                    className="text-bordeaux-600 hover:text-bordeaux-700 transition-colors"
-                  >
-                    {siteData.contact.phone}
-                  </a>
+                {/* Section 3 */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-foreground leading-snug">
+                    {leftColumn.section3.headline}
+                  </h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {leftColumn.section3.body}
+                  </p>
                 </div>
-                <div>
-                  <p className="font-semibold text-warm-gray-900 mb-1">E-Mail</p>
-                  <a
-                    href={`mailto:${siteData.contact.email}`}
-                    className="text-bordeaux-600 hover:text-bordeaux-700 transition-colors"
-                  >
-                    {siteData.contact.email}
-                  </a>
+                {/* Section 4 */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-foreground leading-snug">
+                    {leftColumn.section4.headline}
+                  </h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {leftColumn.section4.body}
+                  </p>
                 </div>
+                {/* Section 1 */}
+                {/* <div className="text-base text-foreground leading-relaxed">
+                  <p>{leftColumn.section1.p1}</p>
+                </div> */}
               </div>
-            </InfoCard>
+            </div>
 
-            <InfoCard title="Öffnungszeiten" icon={Clock}>
-              <div className="space-y-2">
-                {siteData.openingHours.map((item) => (
-                  <div key={item.day} className="flex justify-between">
-                    <span>{item.day}</span>
-                    <span className="font-medium">{item.time}</span>
+            {/* Call to Action Card */}
+            <div className="bg-muted/30 rounded-2xl p-8 border border-muted text-center">
+              <h4 className="text-2xl font-bold text-foreground mb-2">
+                {leftColumn.callToAction.title}
+              </h4>
+              <p className="text-lg text-muted-foreground mb-6">
+                {leftColumn.callToAction.subtitle}
+              </p>
+              <BookingButton variant="primary" size="lg" />
+            </div>
+          </div>
+
+          {/* Right Column - Contact Sidebar */}
+          <div className="flex flex-col justify-around h-full">
+            {/* Quick Contact Box */}
+            <div className="bg-muted/30 rounded-2xl p-8 border border-muted">
+              <h4 className="text-xl font-semibold text-foreground mb-2 leading-snug tracking-tight">
+                {rightColumn.quickContact.title}
+              </h4>
+              <p className="text-sm text-muted-foreground mb-6 leading-loose">
+                {rightColumn.quickContact.subtitle}
+              </p>
+              <div className="space-y-3 mb-8">
+                {rightColumn.quickContact.benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm text-foreground leading-loose">
+                      {benefit}
+                    </span>
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-warm-gray-600 mt-4">
-                Termine nur nach Vereinbarung
-              </p>
-            </InfoCard>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-card p-6 lg:p-8 rounded-lg h-fit">
-            <h3 className="text-2xl font-bold text-warm-gray-900 mb-6">
-              Nachricht senden
-            </h3>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <Label
-                    htmlFor="name"
-                    className="text-sm font-medium text-warm-gray-700"
-                  >
-                    Name *
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="mt-1"
-                    placeholder="Ihr vollständiger Name"
-                  />
-                </div>
-
-                <div>
-                  <Label
-                    htmlFor="phone"
-                    className="text-sm font-medium text-warm-gray-700"
-                  >
-                    Telefon
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="mt-1"
-                    placeholder="Ihre Telefonnummer"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <Label
-                  htmlFor="email"
-                  className="text-sm font-medium text-warm-gray-700"
-                >
-                  E-Mail *
-                </Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="mt-1"
-                  placeholder="ihre.email@beispiel.de"
-                />
-              </div>
-
-              <div>
-                <Label
-                  htmlFor="treatment"
-                  className="text-sm font-medium text-warm-gray-700"
-                >
-                  Gewünschte Behandlung
-                </Label>
-                <Input
-                  id="treatment"
-                  name="treatment"
-                  type="text"
-                  value={formData.treatment}
-                  onChange={handleInputChange}
-                  className="mt-1"
-                  placeholder="z.B. Botox, Hyaluron, Beratung"
-                />
-              </div>
-
-              <div>
-                <Label
-                  htmlFor="message"
-                  className="text-sm font-medium text-warm-gray-700"
-                >
-                  Nachricht *
-                </Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="mt-1 min-h-[120px]"
-                  placeholder="Beschreiben Sie Ihre Wünsche oder stellen Sie Ihre Fragen..."
-                />
-              </div>
-
               <Button
-                type="submit"
-                className="w-full bg-bordeaux-600 hover:bg-bordeaux-700 text-white font-semibold py-3 text-lg"
+                asChild
+                className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-4 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
-                Nachricht senden
+                <a
+                  href={`https://wa.me/${rightColumn.quickContact.whatsappButton.phoneNumber.replace(
+                    /\s/g,
+                    ""
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {rightColumn.quickContact.whatsappButton.text}
+                </a>
               </Button>
+            </div>
 
-              <p className="text-sm text-warm-gray-600 text-center">
-                * Pflichtfelder. Ihre Daten werden vertraulich behandelt.
+            {/* Doctor Information */}
+            <div className="bg-background rounded-2xl p-8 border border-muted shadow-sm">
+              <h4 className="text-xl font-semibold text-foreground mb-1 leading-snug tracking-tight">
+                {rightColumn.doctorInfo.name}
+              </h4>
+              <p className="text-sm text-primary font-medium mb-6 leading-loose tracking-wide">
+                {rightColumn.doctorInfo.title}
               </p>
-            </form>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm font-medium text-foreground mb-1 leading-loose tracking-wide">
+                    Praxisadresse:
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-loose">
+                    {rightColumn.doctorInfo.contact.address}
+                  </p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <a
+                    href={`tel:${rightColumn.doctorInfo.contact.phone.replace(
+                      /\s/g,
+                      ""
+                    )}`}
+                    className="text-sm text-foreground hover:text-primary transition-colors leading-loose"
+                  >
+                    Telefon: {rightColumn.doctorInfo.contact.phone}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <a
+                    href={`mailto:${rightColumn.doctorInfo.contact.email}`}
+                    className="text-sm text-foreground hover:text-primary transition-colors leading-loose"
+                  >
+                    E-Mail: {rightColumn.doctorInfo.contact.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="h-5 w-5 bg-primary rounded-sm flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">IG</span>
+                  </div>
+                  <a
+                    href={`https://instagram.com/${rightColumn.doctorInfo.contact.instagram.replace(
+                      "@",
+                      ""
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-foreground hover:text-primary transition-colors leading-loose"
+                  >
+                    Instagram: {rightColumn.doctorInfo.contact.instagram}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

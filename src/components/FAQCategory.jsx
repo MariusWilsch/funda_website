@@ -1,6 +1,5 @@
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "./FAQItem";
-import { BookingButton } from "./BookingButton";
 
 export function FAQCategory({ category }) {
   const { title, subtitle, questions } = category;

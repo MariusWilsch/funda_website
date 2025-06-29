@@ -1,4 +1,5 @@
 import { BookingButton } from "./BookingButton";
+import { WhatsAppContactButton } from "./WhatsAppContactButton";
 import { Button } from "@/components/ui/button";
 import { Cross } from "lucide-react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
@@ -61,11 +62,12 @@ export function HeroSection() {
               </div>
             </div>
           </BookingButton>
+
           <Button
             asChild
             variant="ghost"
             size="lg"
-            className="text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white 
+            className="text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white
             bg-transparent px-8 py-4 text-lg"
           >
             <a href="#services">Behandlungen ansehen</a>
