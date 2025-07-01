@@ -14,35 +14,19 @@ export const contactData = {
       subtitle: "wo moderne Ästhetik auf medizinische Exzellenz trifft.",
     },
 
-    valueProposition: {
-      intro:
-        "Du wünschst dir Ergebnisse, die nicht gemacht, sondern einfach gut aussehen?",
-      philosophy: "Bei The PrettyPoint erwarten dich keine Standards, sondern",
-      highlighted:
-        "maßgeschneiderte Behandlungen, die dich in deinem natürlichen Glow bestärken",
-      quote: "„Weil echte Schönheit keine Schablone braucht.",
+    section2: {
+      headline: "Individuelle Beratung für natürliche Ergebnisse",
+      body: "Bei The PrettyPoint erwarten dich keine Standards, sondern maßgeschneiderte Behandlungen, die dich in deinem natürlichen Glow bestärken. Wir hören zu, schauen genau hin – und arbeiten mit einem geschulten Auge, ruhiger Hand und fundierter medizinischer Expertise.",
     },
 
-    approach: {
-      description:
-        "Wir hören zu, schauen genau hin – und arbeiten mit einem geschulten Auge, ruhiger Hand und fundierter medizinischer Expertise.",
-      tagline: "Minimaler Eingriff. Maximale Wirkung.",
+    section3: {
+      headline: "Minimaler Eingriff. Maximale Wirkung.",
+      body: "Ob Babybotox, sanfte Hyaluron-Akzente oder exklusive Signature-Behandlungen – bei uns trifft höchste Qualität auf Ästhetik mit Feingefühl.",
     },
 
-    services: {
-      description:
-        "Ob Babybotox, sanfte Hyaluron-Akzente oder exklusive Signature-Behandlungen – bei uns trifft höchste Qualität auf Ästhetik mit Feingefühl.",
-    },
-
-    qualityPromise: {
-      medical: "100% ärztlich geführt.",
-      trust: "100% Vertrauenssache.",
-    },
-
-    treatmentPhilosophy: {
-      description:
-        "Du wirst ausschließlich von einer erfahrenen Ärztin behandelt – mit Präzision, Transparenz und einem Ziel:",
-      goal: "Deine natürliche Ausstrahlung zu betonen – nicht zu verändern.",
+    section4: {
+      headline: "100% ärztlich geführt. 100% Vertrauenssache.",
+      body: "Du wirst ausschließlich von einer erfahrenen Ärztin behandelt – mit Präzision, Transparenz und einem Ziel: Deine natürliche Ausstrahlung zu betonen – nicht zu verändern.",
     },
 
     callToAction: {

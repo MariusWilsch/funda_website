@@ -36,48 +36,33 @@ export function ContactSection() {
                   </p>
                   <Separator className="w-24 mx-auto bg-bordeaux-500" />
                 </div>
-                {/* Value Proposition */}
-                <div className="space-y-4">
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.valueProposition.intro}
-                  </p>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.valueProposition.philosophy}{" "}
-                    <span className="font-semibold text-foreground">
-                      {leftColumn.valueProposition.highlighted}
-                    </span>
-                  </p>
-                  <p className="text-lg font-medium text-foreground italic">
-                    {leftColumn.valueProposition.quote}
-                  </p>
-                </div>
-
-                {/* Approach */}
+                {/* Section 2 */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-foreground leading-snug">
-                    {leftColumn.approach.tagline}
+                    {leftColumn.section2.headline}
                   </h4>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.approach.description}
+                    {leftColumn.section2.body}
                   </p>
                 </div>
 
-                {/* Services */}
-                <div className="space-y-4">
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.services.description}
-                  </p>
-                </div>
-
-                {/* Quality Promise & Treatment Philosophy */}
+                {/* Section 3 */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-foreground leading-snug">
-                    {leftColumn.qualityPromise.medical}{" "}
-                    {leftColumn.qualityPromise.trust}
+                    {leftColumn.section3.headline}
                   </h4>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.treatmentPhilosophy.description}{" "}
-                    {leftColumn.treatmentPhilosophy.goal}
+                    {leftColumn.section3.body}
+                  </p>
+                </div>
+
+                {/* Section 4 */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-foreground leading-snug">
+                    {leftColumn.section4.headline}
+                  </h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {leftColumn.section4.body}
                   </p>
                 </div>
               </div>
