@@ -7,6 +7,7 @@ import { FAQSection } from "./components/FAQSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { IntroSplash } from "./components/IntroSplash";
+import { MaintenanceWrapper } from "./components/MaintenanceWrapper";
 
 function App() {
   const [isIntroMounted, setIsIntroMounted] = useState(true);
@@ -30,24 +31,26 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      {isIntroMounted && <IntroSplash isFading={isFading} />}
-      <div
-        className={`transition-opacity duration-1000 ${
-          isFading ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Header />
-        <main className="relative">
-          <HeroSection />
-          <ServicesSection />
-          <BookingSection />
-          <FAQSection />
-          <ContactSection />
-        </main>
-        <Footer />
+    <MaintenanceWrapper>
+      <div className="min-h-screen">
+        {isIntroMounted && <IntroSplash isFading={isFading} />}
+        <div
+          className={`transition-opacity duration-1000 ${
+            isFading ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Header />
+          <main className="relative">
+            <HeroSection />
+            <ServicesSection />
+            <BookingSection />
+            <FAQSection />
+            <ContactSection />
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </MaintenanceWrapper>
   );
 }
 
