@@ -33,8 +33,11 @@ export function BookingSection() {
   }, []);
 
   return (
-    <section id="booking-section" className="py-32 bg-cream-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      id="booking-section"
+      className="py-32 px-3 xs:px-4 sm:px-6 lg:px-8 bg-cream-50"
+    >
+      <div className="max-w-sm xs:max-w-md sm:max-w-4xl md:max-w-6xl lg:max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-bordeaux-900 mb-6">

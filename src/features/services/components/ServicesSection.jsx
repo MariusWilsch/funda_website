@@ -4,8 +4,8 @@ import { serviceCardData } from "../data/serviceCardData";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-20 px-6 md:px-8 lg:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="py-20 px-3 xs:px-4 sm:px-6 lg:px-8">
+      <div className="max-w-sm xs:max-w-md sm:max-w-4xl md:max-w-6xl lg:max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-warm-gray-900 mb-4">
