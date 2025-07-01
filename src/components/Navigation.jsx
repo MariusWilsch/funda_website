@@ -42,7 +42,6 @@ export function Navigation({ isMobile = false, onNavItemClick }) {
                     <Button
                       variant="ghost"
                       className="w-full justify-start px-3 py-2 text-base font-medium text-warm-gray-600 hover:text-bordeaux-600 hover:bg-warm-gray-100"
-                      onClick={onNavItemClick}
                     >
                       {subItem.label}
                     </Button>
