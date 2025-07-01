@@ -26,7 +26,7 @@ export function Footer() {
     <footer className="bg-warm-gray-900 text-white">
       <div className="max-w-sm xs:max-w-md sm:max-w-4xl md:max-w-6xl lg:max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-8 xs:py-10 sm:py-12 grid grid-cols-1 md:grid-cols-3 gap-6 xs:gap-7 sm:gap-8 justify-items-center md:justify-items-start">
+        <div className="py-8 xs:py-10 sm:py-12 grid grid-cols-1 md:grid-cols-3 gap-6 xs:gap-7 sm:gap-8 justify-items-center md:justify-items-start items-start">
           {/* Treatments Column */}
           <FooterColumn title="Behandlungen">
             {treatmentLinks.map((link) => (
