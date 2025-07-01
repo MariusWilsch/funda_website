@@ -66,9 +66,9 @@ export const serviceCardData = [
       "Hausärztliche Versorgung und Wundbehandlung nach GOÄ. Vollständige Privatpraxis.",
     startingPrice: "Nach GOÄ",
     timingInfo: {
-      duration: "PLACEHOLDER",
-      results: "PLACEHOLDER",
-      longevity: "PLACEHOLDER",
+      duration: "",
+      results: "",
+      longevity: "",
     },
   },
 ];
