@@ -2,64 +2,7 @@ import { Phone, Mail, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { BookingButton } from "./BookingButton";
-
-// Data is now inlined and restructured
-const contactData = {
-  heading: "Kontakt & Beratung",
-  leftColumn: {
-    welcome: {
-      title: "Willkommen bei The PrettyPoint",
-      subtitle: "wo moderne Ästhetik auf medizinische Exzellenz trifft.",
-    },
-    section1: {
-      p1: "Du wünschst dir Ergebnisse, die nicht gemacht, sondern einfach gut aussehen?",
-    },
-    quote: "„Weil echte Schönheit keine Schablone braucht.",
-    section2: {
-      headline: "Individuelle Beratung für natürliche Ergebnisse",
-      body: "Bei The PrettyPoint erwarten dich keine Standards, sondern maßgeschneiderte Behandlungen, die dich in deinem natürlichen Glow bestärken. Wir hören zu, schauen genau hin – und arbeiten mit einem geschulten Auge, ruhiger Hand und fundierter medizinischer Expertise.",
-    },
-    section3: {
-      headline: "Minimaler Eingriff. Maximale Wirkung.",
-      body: "Ob Babybotox, sanfte Hyaluron-Akzente oder exklusive Signature-Behandlungen – bei uns trifft höchste Qualität auf Ästhetik mit Feingefühl.",
-    },
-    section4: {
-      headline: "100% ärztlich geführt. 100% Vertrauenssache.",
-      body: "Du wirst ausschließlich von einer erfahrenen Ärztin behandelt – mit Präzision, Transparenz und einem Ziel: Deine natürliche Ausstrahlung zu betonen – nicht zu verändern.",
-    },
-    callToAction: {
-      title: "Bereit für Ihren PrettyPoint-Moment?",
-      subtitle:
-        "Jetzt Termin sichern – und erleben, wie sich medizinische Ästhetik richtig gut anfühlen kann.",
-    },
-  },
-  rightColumn: {
-    quickContact: {
-      title: "Sofort kontaktieren",
-      subtitle: "Schnell, einfach, persönlich",
-      benefits: [
-        "Antwort am selben Tag garantiert",
-        "Persönliche Beratung",
-        "Direkte Terminbuchung",
-        "Diskret und vertraulich",
-      ],
-      whatsappButton: {
-        text: "WhatsApp Chat starten",
-        phoneNumber: "+4915778527430",
-      },
-    },
-    doctorInfo: {
-      name: "Dr. med. Sarah Müller",
-      title: "Fachärztin für Ästhetische Medizin",
-      contact: {
-        address: "Hefnersteig 1, 13629 Berlin",
-        phone: "0157 78527430",
-        email: "info@theprettypoint.de",
-        instagram: "@the_prettypoint_berlin",
-      },
-    },
-  },
-};
+import { contactData } from "@/data/contactData";
 
 export function ContactSection() {
   const { heading, leftColumn, rightColumn } = contactData;
@@ -93,37 +36,50 @@ export function ContactSection() {
                   </p>
                   <Separator className="w-24 mx-auto bg-bordeaux-500" />
                 </div>
-                {/* Section 2 */}
+                {/* Value Proposition */}
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-foreground leading-snug">
-                    {leftColumn.section2.headline}
-                  </h4>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.section2.body}
+                    {leftColumn.valueProposition.intro}
+                  </p>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {leftColumn.valueProposition.philosophy}{" "}
+                    <span className="font-semibold text-foreground">
+                      {leftColumn.valueProposition.highlighted}
+                    </span>
+                  </p>
+                  <p className="text-lg font-medium text-foreground italic">
+                    {leftColumn.valueProposition.quote}
                   </p>
                 </div>
-                {/* Section 3 */}
+
+                {/* Approach */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-foreground leading-snug">
-                    {leftColumn.section3.headline}
+                    {leftColumn.approach.tagline}
                   </h4>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.section3.body}
+                    {leftColumn.approach.description}
                   </p>
                 </div>
-                {/* Section 4 */}
+
+                {/* Services */}
+                <div className="space-y-4">
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {leftColumn.services.description}
+                  </p>
+                </div>
+
+                {/* Quality Promise & Treatment Philosophy */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-foreground leading-snug">
-                    {leftColumn.section4.headline}
+                    {leftColumn.qualityPromise.medical}{" "}
+                    {leftColumn.qualityPromise.trust}
                   </h4>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    {leftColumn.section4.body}
+                    {leftColumn.treatmentPhilosophy.description}{" "}
+                    {leftColumn.treatmentPhilosophy.goal}
                   </p>
                 </div>
-                {/* Section 1 */}
-                {/* <div className="text-base text-foreground leading-relaxed">
-                  <p>{leftColumn.section1.p1}</p>
-                </div> */}
               </div>
             </div>
 
@@ -165,7 +121,7 @@ export function ContactSection() {
               >
                 <a
                   href={`https://wa.me/${rightColumn.quickContact.whatsappButton.phoneNumber.replace(
-                    /\s/g,
+                    /[\s+]/g,
                     ""
                   )}`}
                   target="_blank"

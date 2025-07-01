@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { contactInfo } from "@/data/contactInfo";
 
 export function WhatsAppContactButton({ className = "", ...props }) {
-  const phoneNumber = "4915566239974"; // The Pretty Point's WhatsApp number
+  const phoneNumber = contactInfo.phone.whatsapp; // The Pretty Point's WhatsApp number
   const message =
     "Hallo, ich interessiere mich für eine Beratung bei The Pretty Point.";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;

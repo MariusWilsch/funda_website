@@ -28,7 +28,7 @@ export const faqData = {
         id: "botox-4",
         question: "Wann sieht man erste Ergebnisse?",
         answer:
-          "Erste Effekte sind meist nach 2-3 Tagen sichtbar. Das vollständige Ergebnis entwickelt sich über 10-14 Tage. In dieser Zeit sollten Sie geduldig sein und das Endergebnis abwarten.",
+          "Erste Effekte sind meist ab Tag 4-5 sichtbar. Das vollständige Ergebnis entwickelt sich über 10-14 Tage. In dieser Zeit sollten Sie geduldig sein und das Endergebnis abwarten.",
       },
       {
         id: "botox-5",

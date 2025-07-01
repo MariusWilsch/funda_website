@@ -3,6 +3,8 @@ import { Phone, Mail } from "lucide-react";
 import { BookingButton } from "./BookingButton";
 import { Navigation } from "./Navigation";
 import { MobileMenu } from "./MobileMenu";
+import { WhatsAppButton } from "./WhatsAppButton";
+import { WhatsAppIconButton } from "./WhatsAppIconButton";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import logoBlack from "@/assets/LogoBlack.png";
 
@@ -62,20 +64,24 @@ export function Header() {
             </div>
 
             {/* Right Aligned Group */}
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-4 md:space-x-8">
               {/* Desktop Navigation */}
               <Navigation />
 
-              {/* Desktop CTA Button */}
-              <div className="hidden md:flex">
+              {/* Desktop CTA Buttons */}
+              <div className="hidden md:flex items-center space-x-3">
                 <BookingButton
                   variant="primary"
                   size={isScrolled ? "default" : "lg"}
                 />
+                <WhatsAppButton size={isScrolled ? "default" : "lg"} />
               </div>
 
-              {/* Mobile Menu */}
-              <MobileMenu />
+              {/* Mobile: WhatsApp Icon + Menu */}
+              <div className="md:hidden flex items-center space-x-3">
+                <WhatsAppIconButton />
+                <MobileMenu />
+              </div>
             </div>
           </div>
         </div>

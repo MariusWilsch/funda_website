@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Navigation } from "./Navigation";
 import { BookingButton } from "./BookingButton";
+import { WhatsAppIconButton } from "./WhatsAppIconButton";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import logoBlack from "@/assets/LogoBlack.png";
 
@@ -46,7 +47,14 @@ export function MobileMenu() {
               onNavItemClick={() => setIsOpen(false)}
             />
           </div>
-          <div className="pt-6 border-t border-warm-gray-200">
+          <div className="pt-6 border-t border-warm-gray-200 space-y-4">
+            <div className="flex items-center justify-center space-x-4">
+              <WhatsAppIconButton
+                className="flex-shrink-0"
+                onClick={() => setIsOpen(false)}
+              />
+              <span className="text-sm text-warm-gray-600">WhatsApp Chat</span>
+            </div>
             <BookingButton
               variant="primary"
               size="lg"

@@ -11,7 +11,7 @@ export const serviceCardData = [
     startingPrice: "179 €",
     timingInfo: {
       duration: "20-30 Min",
-      results: "Ab Tag 3",
+      results: "Ab Tag 4-5",
       longevity: "3-5 Monate",
     },
   },
@@ -55,6 +55,20 @@ export const serviceCardData = [
       duration: "45 Min",
       results: "Ab Woche 2",
       longevity: "6-12 Monate",
+    },
+  },
+
+  // Privatärztliche Leistungen Service (Standard - index 4)
+  {
+    serviceType: "privatarztlich",
+    title: "Privatärztliche Leistungen",
+    description:
+      "Hausärztliche Versorgung und Wundbehandlung nach GOÄ. Vollständige Privatpraxis.",
+    startingPrice: "Nach GOÄ",
+    timingInfo: {
+      duration: "PLACEHOLDER",
+      results: "PLACEHOLDER",
+      longevity: "PLACEHOLDER",
     },
   },
 ];

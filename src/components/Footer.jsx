@@ -58,7 +58,6 @@ export function Footer() {
             ))}
           </FooterColumn>
 
-
           {/* Legal Column */}
           <FooterColumn title="Rechtliches">
             {legalLinks.map((link) => (
@@ -70,11 +69,20 @@ export function Footer() {
 
           {/* Opening Hours Column */}
           <FooterColumn title="Öffnungszeiten">
-            <p className="text-warm-gray-300">
-              Montag - Freitag: 9:00 - 18:00 Uhr
-            </p>
-            <p className="text-warm-gray-300">Samstag: 9:00 - 14:00 Uhr</p>
-            <p className="text-warm-gray-300">Sonntag: Geschlossen</p>
+            <div className="space-y-1">
+              <div>
+                <p className="text-sm font-medium text-warm-gray-200">
+                  Montag - Freitag
+                </p>
+                <p className="text-sm text-warm-gray-300">9:00 - 18:00 Uhr</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium text-warm-gray-200">
+                  Samstag - Sonntag
+                </p>
+                <p className="text-sm text-warm-gray-300">Geschlossen</p>
+              </div>
+            </div>
             <p className="text-sm text-warm-gray-400 pt-2">
               Termine nur nach Vereinbarung
             </p>

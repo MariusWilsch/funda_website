@@ -1,6 +1,8 @@
 // Contact & Consultation Section Data for The Pretty Point Medical Practice
 // Complete copywriting content for the Kontakt & Beratung section
 
+import { contactInfo } from "./contactInfo";
+
 export const contactData = {
   // Main section heading
   heading: "Kontakt & Beratung",
@@ -63,29 +65,28 @@ export const contactData = {
       ],
       whatsappButton: {
         text: "WhatsApp Chat starten",
-        phoneNumber: "+4915778527430", // This should be updated with actual number
+        phoneNumber: `+${contactInfo.phone.whatsapp}`,
       },
     },
 
     doctorInfo: {
-      name: "Dr. med. Sarah Müller",
-      title: "Fachärztin für Ästhetische Medizin",
+      name: contactInfo.doctor.name,
+      title: contactInfo.doctor.title,
       contact: {
-        address: "Hefnersteig 1, 13629 Berlin",
-        phone: "0157 78527430",
-        email: "info@theprettypoint.de",
-        instagram: "@the_prettypoint_berlin",
+        address: contactInfo.address.full,
+        phone: contactInfo.phone.display,
+        email: contactInfo.email,
+        instagram: contactInfo.instagram,
       },
     },
 
     openingHours: {
       title: "Öffnungszeiten",
       schedule: {
-        weekdays: "Montag - Freitag: 9:00 - 18:00 Uhr",
-        saturday: "Samstag: 9:00 - 14:00 Uhr",
-        sunday: "Sonntag: Geschlossen",
+        weekdays: contactInfo.openingHours.weekdays,
+        weekend: contactInfo.openingHours.weekend,
       },
-      appointmentNote: "Termine nur nach Vereinbarung • Beratung: 20€",
+      appointmentNote: contactInfo.openingHours.appointmentNote,
     },
   },
 };

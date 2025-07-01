@@ -43,7 +43,7 @@ export const servicesDialogData = {
       "Fältchen an Stirn, Zornesfalte oder Augenpartie? Botox ist eine bewährte medizinische Methode, um mimische Falten gezielt zu glätten – ohne OP, ohne Ausfallzeit. Der Wirkstoff (Botulinumtoxin A) reduziert die Muskelaktivität, die für die Faltenbildung verantwortlich ist – das Ergebnis: ein entspannter, frischer Gesichtsausdruck.\n\nBotulinumtoxin A glättet nicht nur mimische Falten – es kann auch medizinisch sinnvoll eingesetzt werden: bei Migräne, Zähneknirschen (Bruxismus), Hyperhidrose oder Spannungskopfschmerzen.\n\nBuchen Sie jetzt Ihre Botox-Behandlung – funktional & ästhetisch.",
     treatmentInfo: {
       duration: "ca. 20-30 Minuten",
-      onset: "ab Tag 3, voller Effekt nach 10-14 Tagen",
+      onset: "ab Tag 4-5, voller Effekt nach 10-14 Tagen",
       longevity: "in der Regel 3-5 Monate",
       downtime: "keine – du kannst direkt zurück in deinen Alltag",
     },
@@ -206,7 +206,11 @@ export const servicesDialogData = {
             basePrice: "ab 249 €",
             note: "pro Sitzung",
           },
-          { name: "Knieinnenseiten", basePrice: "ab 169 €", note: "pro Sitzung" },
+          {
+            name: "Knieinnenseiten",
+            basePrice: "ab 169 €",
+            note: "pro Sitzung",
+          },
         ],
       },
     ],
@@ -269,7 +273,43 @@ export const servicesDialogData = {
     ],
     ctaButtonText: "Jetzt Termin sichern",
   },
+
+  privatarztlich: {
+    id: "privatarztlich",
+    title: "Privatärztliche Leistungen",
+    subtitle: "Hausärztliche Versorgung nach GOÄ",
+    description:
+      "Neben unseren ästhetischen Behandlungen bieten wir Ihnen in unserer Privatpraxis auch ausgewählte privatärztliche Leistungen an. Diese werden gemäß der Gebührenordnung für Ärzte (GOÄ) abgerechnet.\n\nWir sind eine vollständig bei der Ärztekammer registrierte Privatpraxis und bieten Ihnen alle hausärztlichen Leistungen sowie Wundversorgung an.\n\nBitte beachten Sie: Die Erstattung durch private Krankenkassen oder Beihilfestellen kann variieren – wir beraten Sie gern individuell vorab.",
+    treatmentInfo: {
+      duration: "PLACEHOLDER - Je nach Behandlung",
+      onset: "PLACEHOLDER - Sofort verfügbar",
+      longevity: "PLACEHOLDER - Nach Bedarf",
+      downtime: "PLACEHOLDER - Keine",
+    },
+    pricingGroups: [
+      {
+        groupTitle: "Hausärztliche Leistungen",
+        items: [
+          {
+            name: "PLACEHOLDER - Allgemeine Untersuchung",
+            basePrice: "Nach GOÄ",
+          },
+          { name: "PLACEHOLDER - Wundversorgung", basePrice: "Nach GOÄ" },
+          { name: "PLACEHOLDER - Beratungsgespräch", basePrice: "Nach GOÄ" },
+          { name: "PLACEHOLDER - Weitere Leistungen", basePrice: "Nach GOÄ" },
+        ],
+      },
+    ],
+    disclaimers: [
+      "Alle Leistungen werden nach der Gebührenordnung für Ärzte (GOÄ) abgerechnet.",
+      "Die Erstattung durch private Krankenkassen kann variieren.",
+      "Gerne beraten wir Sie vorab über die Kosten.",
+      "PLACEHOLDER - Weitere Hinweise zur GOÄ-Abrechnung",
+    ],
+    ctaButtonText: "Jetzt Beratung vereinbaren",
+  },
 };
 
 // Export individual services for easier access
-export const { botox, hyaluron, lipolyse, prp } = servicesDialogData;
+export const { botox, hyaluron, lipolyse, prp, privatarztlich } =
+  servicesDialogData;
