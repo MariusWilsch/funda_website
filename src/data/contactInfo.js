@@ -4,13 +4,13 @@
 export const contactInfo = {
   // Phone number data - all formats needed across the website
   phone: {
-    display: "+49 177 8464 022", // For display on website
-    whatsapp: "491778464022", // For WhatsApp URLs (no + or spaces)
-    tel: "+491778464022", // For tel: links (no spaces)
+    display: "+49 157 78527430", // For display on website
+    whatsapp: "4915778527430", // For WhatsApp URLs (no + or spaces)
+    tel: "+4915778527430", // For tel: links (no spaces)
   },
 
   // Email information
-  email: "info@theprettypoint.de",
+  email: "theprettypoint@outlook.de",
 
   // Address information
   address: {
@@ -26,7 +26,7 @@ export const contactInfo = {
   // Doctor information
   doctor: {
     name: "D-r Funda T. Kircil",
-    title: "Ärztin für Ästhetische Medizin",
+    title: "Ärztin",
   },
 
   // Opening hours

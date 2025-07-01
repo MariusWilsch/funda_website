@@ -164,7 +164,7 @@ export function ContactSection() {
                     </p>
                     <a
                       href={`mailto:${rightColumn.doctorInfo.contact.email}`}
-                      className="text-xs xs:text-sm text-muted-foreground hover:text-primary transition-colors leading-loose"
+                      className="text-xs xs:text-sm text-muted-foreground hover:text-primary transition-colors leading-loose break-all"
                     >
                       {rightColumn.doctorInfo.contact.email}
                     </a>
@@ -184,7 +184,7 @@ export function ContactSection() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs xs:text-sm text-muted-foreground hover:text-primary transition-colors leading-loose"
+                      className="text-xs xs:text-sm text-muted-foreground hover:text-primary transition-colors leading-loose break-all"
                     >
                       {rightColumn.doctorInfo.contact.instagram}
                     </a>

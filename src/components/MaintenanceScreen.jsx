@@ -1,5 +1,6 @@
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import logoBlack from "@/assets/LogoBlack.png";
+import { contactInfo } from "@/data/contactInfo";
 
 export function MaintenanceScreen() {
   return (
@@ -26,10 +27,10 @@ export function MaintenanceScreen() {
               Für sofortige Terminbuchungen:
             </p>
             <a
-              href="https://wa.me/4915778527430"
+              href={`https://wa.me/${contactInfo.phone.whatsapp}`} // The Pretty Point's WhatsApp number
               className="inline-flex items-center gap-2 text-bordeaux-600 hover:text-bordeaux-700 font-medium"
             >
-              📱 WhatsApp: 0157 78527430
+              📱 WhatsApp: {contactInfo.phone.display}
             </a>
           </div>
         </div>

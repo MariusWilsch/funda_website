@@ -9,7 +9,7 @@ export function BookingSection() {
     (async function () {
       try {
         console.log("🚀 [BookingSection] Initializing Cal API...");
-        const cal = await getCalApi({ namespace: "coffee-break" });
+        const cal = await getCalApi({ namespace: "service" });
 
         cal("ui", {
           hideEventTypeDetails: false,
@@ -77,11 +77,11 @@ export function BookingSection() {
           {/* Cal.com Embed - Only render when API is ready */}
           {isApiReady && !hasError && (
             <Cal
-              namespace="coffee-break"
-              calLink="mariuswilsch/coffee-break"
+              namespace="service"
+              calLink="theprettypoint/service"
               style={{
                 width: "100%",
-                height: "600px",
+                height: "100%",
                 overflow: "scroll",
               }}
               config={{
