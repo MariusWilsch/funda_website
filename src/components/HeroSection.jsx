@@ -13,7 +13,7 @@ export function HeroSection() {
         <OptimizedImage
           src={heroBackground}
           alt="Aesthetic medicine background"
-          className="h-full w-full object-contain"
+          className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
