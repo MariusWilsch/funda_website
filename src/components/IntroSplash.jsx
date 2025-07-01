@@ -1,4 +1,4 @@
-import logoWhite from "@/assets/LogoWhite.png";
+import logoWhite from "@/assets/LogoBig.png";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export function IntroSplash({ isFading }) {
