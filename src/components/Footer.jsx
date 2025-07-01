@@ -70,20 +70,22 @@ export function Footer() {
           {/* Opening Hours Column */}
           <FooterColumn title="Öffnungszeiten">
             <div className="space-y-1">
-              <div>
-                <p className="text-sm font-medium text-warm-gray-200">
+              <div className="mb-2">
+                <p className="text-sm font-medium text-warm-gray-200 mb-0">
                   Montag - Freitag
                 </p>
-                <p className="text-sm text-warm-gray-300">9:00 - 18:00 Uhr</p>
+                <p className="text-sm text-warm-gray-300 mb-0">
+                  9:00 - 18:00 Uhr
+                </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-warm-gray-200">
+                <p className="text-sm font-medium text-warm-gray-200 mb-0">
                   Samstag - Sonntag
                 </p>
-                <p className="text-sm text-warm-gray-300">Geschlossen</p>
+                <p className="text-sm text-warm-gray-300 mb-0">Geschlossen</p>
               </div>
             </div>
-            <p className="text-sm text-warm-gray-400 pt-2">
+            <p className="text-sm text-warm-gray-400 pt-2 mb-0">
               Termine nur nach Vereinbarung
             </p>
           </FooterColumn>

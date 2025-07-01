@@ -5,9 +5,9 @@ import heroBackground from "@/assets/HeroPicture.jpeg";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen grid lg:grid-cols-2 hero-fade-out">
+    <section className="min-h-screen grid lg:grid-cols-2 hero-fade-out pt-20">
       {/* Left Column - Text Content */}
-      <div className="flex items-center justify-center p-8 lg:p-16 pt-24 lg:pt-16">
+      <div className="flex items-center justify-center p-8 lg:p-16">
         <div className="max-w-lg w-full">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-warm-gray-900 leading-tight mb-6">
             Moderne Ästhetik.
