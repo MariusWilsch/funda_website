@@ -96,7 +96,7 @@ export function ContactSection() {
           </div>
 
           {/* Right Column - Contact Sidebar */}
-          <div className="flex flex-col justify-around h-full">
+          <div className="flex flex-col justify-start sm:justify-around h-full gap-8 sm:gap-0">
             {/* Quick Contact Box */}
             <div className="bg-muted/30 rounded-2xl p-8 border border-muted">
               <h4 className="text-xl font-semibold text-foreground mb-2 leading-snug tracking-tight">
@@ -149,42 +149,58 @@ export function ContactSection() {
                     {rightColumn.doctorInfo.contact.address}
                   </p>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <a
-                    href={`tel:${rightColumn.doctorInfo.contact.phone.replace(
-                      /\s/g,
-                      ""
-                    )}`}
-                    className="text-sm text-foreground hover:text-primary transition-colors leading-loose"
-                  >
-                    Telefon: {rightColumn.doctorInfo.contact.phone}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <a
-                    href={`mailto:${rightColumn.doctorInfo.contact.email}`}
-                    className="text-sm text-foreground hover:text-primary transition-colors leading-loose"
-                  >
-                    E-Mail: {rightColumn.doctorInfo.contact.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-5 w-5 bg-primary rounded-sm flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">IG</span>
+
+                {/* Phone */}
+                <div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground leading-loose tracking-wide mb-1">
+                      Telefon:
+                    </p>
+                    <a
+                      href={`tel:${rightColumn.doctorInfo.contact.phone.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors leading-loose"
+                    >
+                      {rightColumn.doctorInfo.contact.phone}
+                    </a>
                   </div>
-                  <a
-                    href={`https://instagram.com/${rightColumn.doctorInfo.contact.instagram.replace(
-                      "@",
-                      ""
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-foreground hover:text-primary transition-colors leading-loose"
-                  >
-                    Instagram: {rightColumn.doctorInfo.contact.instagram}
-                  </a>
+                </div>
+
+                {/* E-Mail */}
+                <div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground leading-loose tracking-wide mb-1">
+                      E-Mail:
+                    </p>
+                    <a
+                      href={`mailto:${rightColumn.doctorInfo.contact.email}`}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors leading-loose"
+                    >
+                      {rightColumn.doctorInfo.contact.email}
+                    </a>
+                  </div>
+                </div>
+
+                {/* Instagram */}
+                <div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground leading-loose tracking-wide mb-1">
+                      Instagram:
+                    </p>
+                    <a
+                      href={`https://instagram.com/${rightColumn.doctorInfo.contact.instagram.replace(
+                        "@",
+                        ""
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors leading-loose"
+                    >
+                      {rightColumn.doctorInfo.contact.instagram}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

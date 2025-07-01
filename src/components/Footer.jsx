@@ -1,9 +1,11 @@
 import { siteData } from "@/data/siteData";
 import { BookingButton } from "./BookingButton";
+import { handleSmoothScroll } from "@/lib/utils";
 
 const FooterLink = ({ href, children }) => (
   <a
     href={href}
+    onClick={(e) => handleSmoothScroll(e, href)}
     className="block text-warm-gray-300 hover:text-bordeaux-400 transition-colors"
   >
     {children}
@@ -40,6 +42,8 @@ export function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-warm-gray-400 hover:text-bordeaux-400 transition-colors"
                   aria-label={social.name}
                 >
@@ -71,19 +75,21 @@ export function Footer() {
           <FooterColumn title="Öffnungszeiten">
             <div className="space-y-1">
               <div>
-                <p className="text-sm font-medium text-warm-gray-200">
+                <p className="text-sm font-medium text-warm-gray-200 mb-1">
                   Montag - Freitag
                 </p>
-                <p className="text-sm text-warm-gray-300">9:00 - 18:00 Uhr</p>
+                <p className="text-sm text-warm-gray-300 mb-0">
+                  9:00 - 18:00 Uhr
+                </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-warm-gray-200">
+                <p className="text-sm font-medium text-warm-gray-200 mb-1">
                   Samstag - Sonntag
                 </p>
-                <p className="text-sm text-warm-gray-300">Geschlossen</p>
+                <p className="text-sm text-warm-gray-300 mb-0">Geschlossen</p>
               </div>
             </div>
-            <p className="text-sm text-warm-gray-400 pt-2">
+            <p className="text-sm text-warm-gray-400 pt-2 mb-0">
               Termine nur nach Vereinbarung
             </p>
           </FooterColumn>

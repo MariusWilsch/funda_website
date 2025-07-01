@@ -2,14 +2,11 @@ import React from "react";
 import { navigationData } from "@/data/navigationData";
 import { ServiceDialog } from "@/features/services";
 import { Button } from "@/components/ui/button";
+import { handleSmoothScroll } from "@/lib/utils";
 
 export function Navigation({ isMobile = false, onNavItemClick }) {
   const handleNavClick = (e, href) => {
-    e.preventDefault();
-    const section = document.querySelector(href);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    handleSmoothScroll(e, href);
     if (onNavItemClick) {
       onNavItemClick();
     }

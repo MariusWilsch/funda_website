@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 import { contactInfo } from "./contactInfo";
 
 export const siteData = {
@@ -15,9 +15,11 @@ export const siteData = {
     { day: "Samstag - Sonntag", time: "Geschlossen" },
   ],
   socials: [
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/the_prettypoint_berlin",
+      icon: FaInstagram,
+    },
   ],
   legalLinks: [
     { name: "Impressum", href: "#impressum" },
