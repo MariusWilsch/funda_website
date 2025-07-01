@@ -1,13 +1,11 @@
 import { BookingButton } from "./BookingButton";
-import { WhatsAppContactButton } from "./WhatsAppContactButton";
 import { Button } from "@/components/ui/button";
-import { Cross } from "lucide-react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import heroBackground from "@/assets/HeroPicture.jpeg";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 hero-fade-out">
+    <section className="relative min-h-screen flex items-center justify-center px-3 xs:px-4 sm:px-6 pt-20 hero-fade-out">
       {/* Background Image and Overlay */}
       <div className="absolute inset-0">
         <OptimizedImage
@@ -20,20 +18,20 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-warm-gray-900 leading-tight mb-6">
+      <div className="relative max-w-sm xs:max-w-md sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto text-center">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-warm-gray-900 leading-tight mb-4 xs:mb-5 sm:mb-6">
           Moderne Ästhetik.
           <br />
           <span>Natürliche Ergebnisse.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-warm-gray-700 max-w-2xl mx-auto leading-relaxed mb-6">
+        <p className="text-base xs:text-lg md:text-xl text-warm-gray-700 max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl mx-auto leading-relaxed mb-4 xs:mb-5 sm:mb-6">
           Bei The PrettyPoint bekommst du Behandlungen, die deinen natürlichen
           Glow verstärken – nicht verändern.
         </p>
 
         {/* Treatment Types */}
-        <p className="text-base text-black mb-6">
+        <p className="text-sm xs:text-base text-black mb-4 xs:mb-5 sm:mb-6">
           Botox • Hyaluron • Lipolyse • PRP
         </p>
         {/* Trust Badge */}
@@ -46,18 +44,21 @@ export function HeroSection() {
           </div>
         </div> */}
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 xs:gap-5 sm:gap-6 mt-6 xs:mt-7 sm:mt-8">
           <BookingButton
             variant="primary"
             size="2xl"
             className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
-            text-base md:text-xl font-bold px-8 md:px-16 py-6 md:py-8 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
+            text-sm xs:text-base md:text-xl font-bold px-4 xs:px-6 sm:px-8 md:px-16 py-4 xs:py-5 sm:py-6 md:py-8 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
           >
             <div className="text-center">
-              <div className="text-base md:text-xl font-bold leading-tight">
-                Bereit für deinen PrettyPoint-Moment?
+              <div className="text-sm xs:text-base md:text-xl font-bold leading-tight">
+                <span className="block xs:hidden">Jetzt buchen</span>
+                <span className="hidden xs:block">
+                  Bereit für deinen PrettyPoint-Moment?
+                </span>
               </div>
-              <div className="text-sm md:text-base mt-2 opacity-90 font-medium text-center">
+              <div className="text-xs xs:text-sm md:text-base mt-1 xs:mt-2 opacity-90 font-medium text-center hidden xs:block">
                 Jetzt buchen
               </div>
             </div>

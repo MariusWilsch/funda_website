@@ -2,7 +2,7 @@ import { faqData } from "@/data/faqData";
 import { siteData } from "@/data/siteData";
 import { FAQCategory } from "./FAQCategory";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
+import { WhatsAppContactButton } from "./WhatsAppContactButton";
 import { HelpCircle, Stethoscope, Users, Shield } from "lucide-react";
 
 export function FAQSection() {
@@ -86,15 +86,8 @@ export function FAQSection() {
             individuellen Fragen und beraten Sie umfassend zu allen
             Behandlungsmöglichkeiten.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild variant="outline" size="lg">
-              <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>
-                Jetzt anrufen
-              </a>
-            </Button>
-            <Button asChild variant="primary" size="lg">
-              <a href={`mailto:${contact.email}`}>E-Mail schreiben</a>
-            </Button>
+          <div className="flex justify-center">
+            <WhatsAppContactButton size="lg" />
           </div>
         </div>
       </div>

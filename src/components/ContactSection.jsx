@@ -21,7 +21,7 @@ export function ContactSection() {
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-[70%_30%] gap-16 lg:gap-20">
           {/* Left Column Wrapper */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-12">
             {/* Main Content Card */}
             <div className="bg-background rounded-2xl p-8 lg:p-12 border border-muted shadow-sm">
               <div className="space-y-8">
@@ -130,7 +130,7 @@ export function ContactSection() {
                   <p className="text-sm font-medium text-foreground mb-1 leading-loose tracking-wide">
                     Praxisadresse:
                   </p>
-                  <p className="text-sm text-muted-foreground leading-loose">
+                  <p className="text-sm text-muted-foreground leading-loose mb-1">
                     {rightColumn.doctorInfo.contact.address}
                   </p>
                 </div>
