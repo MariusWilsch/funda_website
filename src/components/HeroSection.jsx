@@ -49,16 +49,16 @@ export function HeroSection() {
             variant="primary"
             size="2xl"
             className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
-            text-sm xs:text-base md:text-xl font-bold px-4 xs:px-6 sm:px-8 md:px-16 py-4 xs:py-5 sm:py-6 md:py-8 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
+            text-base xs:text-lg sm:text-xl md:text-2xl font-bold px-6 xs:px-8 sm:px-12 md:px-16 py-5 xs:py-6 sm:py-7 md:py-8 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
           >
             <div className="text-center">
-              <div className="text-sm xs:text-base md:text-xl font-bold leading-tight">
+              <div className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold leading-tight">
                 <span className="block xs:hidden">Jetzt buchen</span>
                 <span className="hidden xs:block">
                   Bereit für deinen PrettyPoint-Moment?
                 </span>
               </div>
-              <div className="text-xs xs:text-sm md:text-base mt-1 xs:mt-2 opacity-90 font-medium text-center hidden xs:block">
+              <div className="text-sm xs:text-base md:text-lg mt-1 xs:mt-2 opacity-90 font-medium text-center hidden xs:block">
                 Jetzt buchen
               </div>
             </div>
@@ -68,8 +68,8 @@ export function HeroSection() {
             asChild
             variant="ghost"
             size="lg"
-            className="text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white
-            bg-transparent px-8 py-4 text-lg"
+            className="hidden sm:flex text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white
+            bg-transparent px-4 xs:px-6 sm:px-8 py-4 xs:py-5 sm:py-4 text-sm xs:text-base sm:text-lg"
           >
             <a href="#services">Behandlungen ansehen</a>
           </Button>
