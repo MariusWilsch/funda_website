@@ -241,27 +241,27 @@ export const servicesDialogData = {
         items: [
           {
             name: "Kopfhaut (Haarwachstum)",
-            basePrice: "ab 199 €",
+            basePrice: "199 €",
             note: "",
           },
           {
             name: "Kopfhaut 3er-Paket",
-            basePrice: "ab 549 €",
+            basePrice: "549 €",
             note: "",
           },
           {
             name: "Kopfhaut 5er-Paket",
-            basePrice: "ab 879 €",
+            basePrice: "879 €",
             note: "",
           },
           {
             name: "Gesicht (Anti-Aging & Hautbild)",
-            basePrice: "ab 219 €",
+            basePrice: "219 €",
             note: "",
           },
           {
             name: "Gesicht + Dekolleté",
-            basePrice: "ab 289 €",
+            basePrice: "289 €",
             note: "",
           },
         ],
