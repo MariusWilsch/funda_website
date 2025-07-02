@@ -41,20 +41,22 @@ export function BookingButton({
   };
 
   return (
-    <Button
-      onClick={handleBookingClick}
-      className={`
-        ${
-          variant === "primary"
-            ? "bg-bordeaux-500 hover:bg-bordeaux-600 text-white shadow-lg hover:shadow-xl"
-            : "bg-white border-2 border-bordeaux-500 text-bordeaux-500 hover:bg-bordeaux-50"
-        }
-        ${size === "lg" ? "px-10 py-5 text-xl" : "px-6 py-3 text-base"}
-        font-semibold rounded-md transition-all duration-300 cursor-pointer transform hover:scale-105
-        ${className}
-      `}
-    >
-      {children}
-    </Button>
+    <div className="max-w-full overflow-hidden">
+      <Button
+        onClick={handleBookingClick}
+        className={`
+          ${
+            variant === "primary"
+              ? "bg-bordeaux-500 hover:bg-bordeaux-600 text-white shadow-lg hover:shadow-xl"
+              : "bg-white border-2 border-bordeaux-500 text-bordeaux-500 hover:bg-bordeaux-50"
+          }
+          ${size === "lg" ? "px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg" : "px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base"}
+          font-semibold rounded-md transition-all duration-300 cursor-pointer max-w-full overflow-hidden whitespace-nowrap text-ellipsis
+          ${className}
+        `}
+      >
+        {children}
+      </Button>
+    </div>
   );
 }

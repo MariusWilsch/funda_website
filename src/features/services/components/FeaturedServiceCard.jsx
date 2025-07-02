@@ -21,7 +21,7 @@ export function FeaturedServiceCard({
           <OptimizedImage
             src={featuredImage}
             alt={title}
-            className="absolute h-full w-full object-cover"
+            className="absolute h-full w-full object-cover service-card-image"
             style={{
               objectPosition: "center 20%",
             }}

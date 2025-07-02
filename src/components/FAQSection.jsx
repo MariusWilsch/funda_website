@@ -28,8 +28,8 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-20 px-3 xs:px-4 sm:px-6 lg:px-8">
-      <div className="max-w-sm xs:max-w-md sm:max-w-4xl md:max-w-6xl lg:max-w-7xl mx-auto">
+    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="flex justify-center mb-4">

@@ -10,20 +10,22 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 xs:py-28 sm:py-32 px-3 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20"
+      className="py-24 xs:py-28 sm:py-32 bg-gradient-to-b from-background to-muted/20"
     >
-      <div className="max-w-sm xs:max-w-md sm:max-w-4xl md:max-w-6xl lg:max-w-7xl mx-auto">
+      <div className="container-responsive">
         {/* Main Heading */}
-        <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-foreground mb-12 xs:mb-16 sm:mb-20 text-center leading-tight tracking-tight">
-          {heading}
-        </h2>
+        <div className="text-center mb-12 xs:mb-16 sm:mb-20">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-foreground leading-tight tracking-tight">
+            {heading}
+          </h2>
+        </div>
 
         {/* Two Column Layout */}
-        <div className="grid md:grid-cols-[70%_30%] gap-8 xs:gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 sm:gap-6 md:gap-4 lg:gap-6 w-full items-start max-w-full">
           {/* Left Column Wrapper */}
-          <div className="flex flex-col gap-8 xs:gap-10 sm:gap-12">
+          <div className="flex flex-col gap-6 xs:gap-8 sm:gap-10 w-full max-w-full">
             {/* Main Content Card */}
-            <div className="bg-background rounded-lg xs:rounded-xl sm:rounded-2xl p-6 xs:p-7 sm:p-8 lg:p-12 border border-muted shadow-sm">
+            <div className="bg-background rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 lg:p-8 border border-muted shadow-sm w-full max-w-full">
               <div className="space-y-6 xs:space-y-7 sm:space-y-8">
                 {/* Welcome Section */}
                 <div className="text-center">
@@ -69,22 +71,24 @@ export function ContactSection() {
             </div>
 
             {/* Call to Action Card */}
-            <div className="bg-muted/30 rounded-lg xs:rounded-xl sm:rounded-2xl p-6 xs:p-7 sm:p-8 border border-muted text-center">
+            <div className="bg-muted/30 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-muted text-center w-full max-w-full">
               <h4 className="text-xl xs:text-2xl font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
                 {leftColumn.callToAction.title}
               </h4>
               <p className="text-base xs:text-lg text-muted-foreground mb-5 xs:mb-6">
                 {leftColumn.callToAction.subtitle}
               </p>
-              <BookingButton variant="primary" size="lg" />
+              <div className="w-full max-w-full overflow-hidden px-2">
+                <BookingButton variant="primary" size="lg" />
+              </div>
             </div>
           </div>
 
           {/* Right Column - Contact Sidebar */}
-          <div className="flex flex-col justify-start md:justify-around h-full gap-6 xs:gap-7 sm:gap-8 md:gap-0">
+          <div className="flex flex-col justify-start gap-4 xs:gap-5 sm:gap-6 w-full max-w-full overflow-hidden pr-2">
             {/* Quick Contact Box */}
-            <div className="bg-muted/30 rounded-lg xs:rounded-xl sm:rounded-2xl p-6 xs:p-7 sm:p-8 border border-muted">
-              <h4 className="text-lg xs:text-xl font-semibold text-foreground mb-2 leading-snug tracking-tight">
+            <div className="bg-muted/30 rounded-lg xs:rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-5 border border-muted w-full max-w-full overflow-hidden mr-2">
+              <h4 className="text-base xs:text-lg font-semibold text-foreground mb-2 leading-snug tracking-tight break-words">
                 {rightColumn.quickContact.title}
               </h4>
               <p className="text-xs xs:text-sm text-muted-foreground mb-5 xs:mb-6 leading-loose">
@@ -103,29 +107,32 @@ export function ContactSection() {
                   </div>
                 ))}
               </div>
-              <Button
-                asChild
-                className="w-full bg-primary hover:bg-primary/90 text-white text-base xs:text-lg py-3 xs:py-4 px-5 xs:px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                <a
-                  href={`https://wa.me/${rightColumn.quickContact.whatsappButton.phoneNumber.replace(
-                    /[\s+]/g,
-                    ""
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <div className="w-full max-w-full overflow-hidden px-1">
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-primary/90 text-white text-xs xs:text-sm py-2 px-2 xs:px-3 shadow-lg hover:shadow-xl transition-all duration-300 max-w-full overflow-hidden text-center"
                 >
-                  {rightColumn.quickContact.whatsappButton.text}
-                </a>
-              </Button>
+                  <a
+                    href={`https://wa.me/${rightColumn.quickContact.whatsappButton.phoneNumber.replace(
+                      /[\s+]/g,
+                      ""
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center overflow-hidden text-ellipsis whitespace-nowrap"
+                  >
+                    {rightColumn.quickContact.whatsappButton.text}
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Doctor Information */}
-            <div className="bg-background rounded-lg xs:rounded-xl sm:rounded-2xl p-6 xs:p-7 sm:p-8 border border-muted shadow-sm">
-              <h4 className="text-lg xs:text-xl font-semibold text-foreground mb-1 leading-snug tracking-tight">
+            <div className="bg-background rounded-lg xs:rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-5 border border-muted shadow-sm w-full max-w-full overflow-hidden mr-2">
+              <h4 className="text-base xs:text-lg font-semibold text-foreground mb-1 leading-snug tracking-tight break-words">
                 {rightColumn.doctorInfo.name}
               </h4>
-              <p className="text-xs xs:text-sm text-primary font-medium mb-5 xs:mb-6 leading-loose tracking-wide">
+              <p className="text-xs xs:text-sm text-primary font-medium mb-4 xs:mb-5 leading-loose tracking-wide break-words">
                 {rightColumn.doctorInfo.title}
               </p>
               <div className="space-y-3 xs:space-y-4">
