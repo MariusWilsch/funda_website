@@ -36,19 +36,19 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full overflow-hidden ${
         isPastHero ? "bg-background shadow-sm" : "bg-transparent"
       }`}
     >
       {/* Main Header */}
       <div
-        className={`transition-all duration-300 ${
+        className={`transition-all duration-300 w-full max-w-full overflow-hidden ${
           isPastHero ? "border-b border-warm-gray-200" : ""
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full mx-auto px-2 sm:px-4 lg:px-6 w-full overflow-hidden">
           <div
-            className={`flex items-center justify-between transition-all duration-300 ${
+            className={`flex items-center justify-between transition-all duration-300 w-full max-w-full overflow-hidden ${
               isScrolled ? "h-20" : "h-32"
             } py-2`}
           >
@@ -64,12 +64,12 @@ export function Header() {
             </div>
 
             {/* Right Aligned Group */}
-            <div className="flex items-center space-x-4 md:space-x-8">
+            <div className="flex items-center space-x-1 md:space-x-2 max-w-full overflow-hidden">
               {/* Desktop Navigation */}
               <Navigation />
 
               {/* Desktop CTA Buttons */}
-              <div className="hidden md:flex items-center space-x-3">
+              <div className="hidden md:flex items-center space-x-1 max-w-full overflow-hidden">
                 <BookingButton
                   variant="primary"
                   size={isScrolled ? "default" : "lg"}
@@ -78,7 +78,7 @@ export function Header() {
               </div>
 
               {/* Mobile: WhatsApp Icon + Menu */}
-              <div className="md:hidden flex items-center space-x-3">
+              <div className="md:hidden flex items-center space-x-1 max-w-full overflow-hidden">
                 <WhatsAppIconButton />
                 <MobileMenu />
               </div>

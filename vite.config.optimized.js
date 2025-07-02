@@ -15,6 +15,18 @@ export default defineConfig({
   },
   // Performance optimizations
   build: {
+    // Enable code splitting
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor chunks
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-accordion', '@radix-ui/react-sheet'],
+          icons: ['lucide-react'],
+          calendar: ['@calcom/embed-react'],
+        },
+      },
+    },
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
     // Enable minification
@@ -25,28 +37,6 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
-    // Enable code splitting
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor';
-            }
-            if (id.includes('@radix-ui')) {
-              return 'ui';
-            }
-            if (id.includes('lucide-react')) {
-              return 'icons';
-            }
-            if (id.includes('@calcom')) {
-              return 'calendar';
-            }
-            return 'vendor';
-          }
-        },
-      },
-    },
   },
   // Optimize dependencies
   optimizeDeps: {
@@ -54,6 +44,8 @@ export default defineConfig({
       'react',
       'react-dom',
       'lucide-react',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-accordion',
     ],
   },
   // Enable CSS code splitting

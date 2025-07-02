@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:analyze": "vite build --mode analyze",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "lighthouse": "lighthouse http://localhost:4173 --output html --output-path ./lighthouse-report.html"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
@@ -70,6 +73,7 @@
     "globals": "^16.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
+    "terser": "^5.43.1",
     "vite": "^6.3.5"
   }
 }

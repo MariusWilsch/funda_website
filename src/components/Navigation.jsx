@@ -15,7 +15,7 @@ export function Navigation({ isMobile = false, onNavItemClick }) {
   const baseClasses = "transition-colors duration-200";
   const mobileClasses =
     "flex items-center justify-between w-full px-3 py-3 text-lg font-medium text-warm-gray-700 hover:text-bordeaux-600 hover:bg-warm-gray-50 rounded-md";
-  const desktopClasses = "text-black hover:text-gray-700 font-medium text-lg";
+  const desktopClasses = "text-black hover:text-gray-700 font-medium text-sm lg:text-base whitespace-nowrap overflow-hidden text-ellipsis max-w-full";
 
   if (isMobile) {
     return (
@@ -57,7 +57,7 @@ export function Navigation({ isMobile = false, onNavItemClick }) {
 
   // Desktop Navigation
   return (
-    <nav className="hidden md:flex items-center space-x-8">
+    <nav className="hidden md:flex items-center space-x-2 lg:space-x-3 max-w-full overflow-hidden">
       {navigationData.map((item) => (
         <a
           key={item.label}

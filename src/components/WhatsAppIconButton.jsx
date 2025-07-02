@@ -18,21 +18,24 @@ export function WhatsAppIconButton({ className = "", ...props }) {
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
-    <Button
-      asChild
-      variant="ghost"
-      size="icon"
-      className={`text-[#25D366] hover:text-[#25D366]/80 hover:bg-[#25D366]/10 transition-all duration-300 ${className}`}
-      {...props}
-    >
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp kontaktieren"
+    <div className="max-w-full overflow-hidden">
+      <Button
+        asChild
+        variant="ghost"
+        size="icon"
+        className={`text-[#25D366] hover:text-[#25D366]/80 hover:bg-[#25D366]/10 transition-all duration-300 max-w-full overflow-hidden ${className}`}
+        {...props}
       >
-        <WhatsAppIcon className="h-5 w-5" />
-      </a>
-    </Button>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp kontaktieren"
+          className="flex items-center justify-center max-w-full overflow-hidden"
+        >
+          <WhatsAppIcon className="h-4 w-4 flex-shrink-0" />
+        </a>
+      </Button>
+    </div>
   );
 }

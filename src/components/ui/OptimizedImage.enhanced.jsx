@@ -1,17 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
-const OptimizedImage = ({
-  src,
-  alt,
+const OptimizedImage = ({ 
+  src, 
+  alt, 
   className,
   priority = false,
   sizes = "100vw",
   quality = 75,
   placeholder = "blur",
-  scale = 1, // New prop for scaling (0.1 to 1.0)
-  maxWidth = null, // New prop for max width
-  ...props
+  ...props 
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -32,7 +30,7 @@ const OptimizedImage = ({
           observer.disconnect();
         }
       },
-      {
+      { 
         threshold: 0.1,
         rootMargin: '50px'
       }
@@ -45,6 +43,14 @@ const OptimizedImage = ({
     return () => observer.disconnect();
   }, [priority]);
 
+  // Generate WebP and fallback sources
+  const getOptimizedSrc = (originalSrc, format = 'webp') => {
+    // In a real implementation, you'd have a service or build process
+    // that generates optimized images
+    const extension = originalSrc.split('.').pop();
+    return originalSrc.replace(`.${extension}`, `.${format}`);
+  };
+
   const handleLoad = () => {
     setIsLoaded(true);
   };
@@ -55,7 +61,7 @@ const OptimizedImage = ({
   };
 
   return (
-    <div
+    <div 
       ref={imgRef}
       className={cn("relative overflow-hidden", className)}
       {...props}
@@ -67,25 +73,38 @@ const OptimizedImage = ({
 
       {/* Optimized Image */}
       {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-          onLoad={handleLoad}
-          onError={handleError}
-          className={cn(
-            "transition-opacity duration-300",
-            isLoaded ? "opacity-100" : "opacity-0",
-            error && "opacity-50"
-          )}
-          style={{
-            width: maxWidth ? `min(100%, ${maxWidth})` : '100%',
-            height: 'auto',
-            transform: scale !== 1 ? `scale(${scale})` : undefined,
-            transformOrigin: 'center',
-          }}
-        />
+        <picture>
+          {/* WebP source for modern browsers */}
+          <source 
+            srcSet={getOptimizedSrc(src, 'webp')} 
+            type="image/webp"
+            sizes={sizes}
+          />
+          {/* AVIF source for even better compression */}
+          <source 
+            srcSet={getOptimizedSrc(src, 'avif')} 
+            type="image/avif"
+            sizes={sizes}
+          />
+          {/* Fallback */}
+          <img
+            src={src}
+            alt={alt}
+            loading={priority ? "eager" : "lazy"}
+            decoding="async"
+            onLoad={handleLoad}
+            onError={handleError}
+            className={cn(
+              "transition-opacity duration-300",
+              isLoaded ? "opacity-100" : "opacity-0",
+              error && "opacity-50"
+            )}
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </picture>
       )}
 
       {/* Error state */}

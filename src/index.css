@@ -136,28 +136,482 @@
   * {
     @apply border-border;
   }
+
+  html {
+    @apply scroll-smooth;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-/* Cal.com Modal Sizing - Increase dimensions for better user experience */
+/* Cal.com Modal Sizing - Responsive and overflow-safe */
 @layer components {
   /* Target Cal.com modal containers and iframes */
   [data-cal-namespace] iframe,
   .cal-embed-modal,
   [data-cal-link] + div iframe {
-    width: 90vw !important;
-    height: 85vh !important;
-    max-width: 1000px !important;
-    max-height: 800px !important;
-    min-width: 600px !important;
-    min-height: 500px !important;
+    width: min(90vw, 1000px) !important;
+    height: min(85vh, 800px) !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    min-width: min(600px, 90vw) !important;
+    min-height: min(500px, 85vh) !important;
   }
 
   /* Ensure modal backdrop and positioning */
   [data-cal-namespace],
   .cal-embed-modal-backdrop {
     z-index: 9999 !important;
+  }
+
+  /* Prevent horizontal overflow on small screens */
+  @media (max-width: 640px) {
+    [data-cal-namespace] iframe,
+    .cal-embed-modal,
+    [data-cal-link] + div iframe {
+      width: 95vw !important;
+      min-width: 95vw !important;
+    }
+  }
+
+  /* Component utilities */
+  .btn-primary {
+    @apply bg-bordeaux-600 hover:bg-bordeaux-700 text-white font-medium;
+    @apply transition-all duration-200 ease-in-out;
+    @apply focus:ring-2 focus:ring-bordeaux-500 focus:ring-offset-2;
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border shadow-medium;
+    @apply transition-shadow duration-200 ease-in-out;
+    @apply hover:shadow-large;
+  }
+
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Header/Navigation bar containment */
+  header {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  header > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  header .max-w-full {
+    max-width: calc(100vw - 1rem) !important;
+    width: calc(100vw - 1rem) !important;
+    margin: 0 auto !important;
+    padding: 0 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Navigation links containment */
+  header nav a {
+    max-width: 150px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* Header buttons specific containment */
+  header button,
+  header .flex.items-center.space-x-2 {
+    max-width: fit-content !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* WhatsApp button in header */
+  header button[aria-label*="WhatsApp"],
+  header a[href*="wa.me"] {
+    max-width: 100px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Booking button in header */
+  header button:not([aria-label*="WhatsApp"]) {
+    max-width: 120px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Hero section taller button containment */
+  section:first-of-type button,
+  section:first-of-type .flex button {
+    max-width: calc(100vw - 2rem) !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    min-height: 4rem !important;
+  }
+
+  /* Hero section container containment */
+  section:first-of-type .flex.flex-col > div {
+    max-width: calc(100vw - 2rem) !important;
+    overflow: visible !important;
+    margin: 0 auto !important;
+  }
+
+  /* Hero section text containment - ensure full visibility */
+  section:first-of-type button .text-center,
+  section:first-of-type button .flex {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  section:first-of-type button .text-center > div,
+  section:first-of-type button .flex > div {
+    width: 100% !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  /* Ensure text is fully visible */
+  section:first-of-type button div {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.4 !important;
+    overflow: visible !important;
+  }
+
+  /* Hero section responsive sizing */
+  @media (max-width: 640px) {
+    section:first-of-type button {
+      max-width: calc(100vw - 1.5rem) !important;
+      min-height: 3.5rem !important;
+      font-size: 0.875rem !important;
+    }
+
+    section:first-of-type .flex.flex-col > div {
+      max-width: calc(100vw - 1.5rem) !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    section:first-of-type button {
+      max-width: calc(100vw - 1rem) !important;
+      min-height: 3rem !important;
+      font-size: 0.75rem !important;
+    }
+
+    section:first-of-type .flex.flex-col > div {
+      max-width: calc(100vw - 1rem) !important;
+    }
+  }
+
+  /* Force button content to be visible */
+  section:first-of-type button * {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* Contact section container override */
+  #contact .container-responsive {
+    max-width: calc(100vw - 2rem) !important;
+    width: calc(100vw - 2rem) !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Contact section root container fix */
+  #contact {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+
+  #contact > div {
+    max-width: calc(100vw - 4rem) !important;
+    width: calc(100vw - 4rem) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #contact .grid {
+    justify-items: stretch;
+    max-width: 100%;
+    overflow: hidden;
+    gap: 1rem;
+  }
+
+  #contact .grid > div {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Ensure contact cards don't overflow */
+  #contact .bg-muted\/30,
+  #contact .bg-background {
+    max-width: calc(100% - 1rem);
+    margin: 0 auto;
+    overflow: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+  }
+
+  /* Right column specific containment */
+  #contact .grid > div:last-child {
+    max-width: calc(100% - 1rem);
+    margin-right: 0.5rem;
+  }
+
+  /* Ensure buttons stay within bounds */
+  #contact button,
+  #contact .w-full {
+    max-width: calc(100% - 1rem) !important;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+
+  /* WhatsApp button specific containment */
+  #contact button[href*="wa.me"],
+  #contact a[href*="wa.me"] {
+    max-width: calc(100% - 2rem) !important;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+  }
+
+  /* Button wrapper containment */
+  #contact .bg-muted\/30 > div:last-child,
+  #contact .bg-background > div:last-child {
+    max-width: calc(100% - 1rem);
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  /* Fix text overflow in contact info */
+  #contact .break-all {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    max-width: calc(100% - 1rem);
+  }
+
+  /* All contact buttons containment */
+  #contact button {
+    max-width: calc(100% - 0.5rem) !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Force viewport containment */
+  @media (max-width: 768px) {
+    #contact .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    #contact .grid > div {
+      max-width: calc(100vw - 3rem);
+      margin: 0 auto;
+    }
+
+    /* Mobile button containment */
+    #contact button {
+      max-width: calc(100% - 1rem) !important;
+      font-size: 0.75rem !important;
+      padding: 0.5rem 0.75rem !important;
+    }
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Global image size reduction utilities */
+  .img-scale-90 {
+    transform: scale(0.9);
+  }
+
+  .img-scale-85 {
+    transform: scale(0.85);
+  }
+
+  .img-scale-80 {
+    transform: scale(0.8);
+  }
+
+  .img-scale-75 {
+    transform: scale(0.75);
+  }
+
+  /* Responsive image scaling */
+  .img-responsive-small {
+    max-width: 85%;
+    height: auto;
+  }
+
+  .img-responsive-smaller {
+    max-width: 75%;
+    height: auto;
+  }
+
+  /* Logo specific scaling */
+  .logo-small {
+    width: 80% !important;
+    max-width: 120px;
+  }
+
+  .logo-smaller {
+    width: 70% !important;
+    max-width: 100px;
+  }
+
+  /* Global 20% size reduction for all images */
+  img {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+
+  /* Global 20% size reduction for all buttons */
+  button,
+  .btn,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"] {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+
+  /* Ensure containers don't get affected by scaling */
+  .no-scale {
+    transform: none !important;
+  }
+
+  /* Specific overrides for elements that shouldn't scale */
+  .hero-fade-out img,
+  .background-image,
+  .hero-background,
+  .full-width-image,
+  .cover-image {
+    transform: none !important;
+  }
+
+  /* Service cards and content images should scale */
+  .service-card img,
+  .content-image,
+  .feature-image {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+
+  /* Ensure proper spacing after scaling */
+  img {
+    margin: 0.5rem auto;
+  }
+
+  button,
+  .btn {
+    margin: 0.25rem;
   }
 }
