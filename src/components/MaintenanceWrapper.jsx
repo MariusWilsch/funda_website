@@ -16,9 +16,9 @@ export function MaintenanceWrapper({ children }) {
       }
 
       const width = window.innerWidth;
-      // Show maintenance screen BETWEEN mobile and desktop (425px - 1440px)
-      // Allow normal website on very small mobile (<425px) and large desktop (>1440px)
-      setShowMaintenance(width > 425 && width <= 1600);
+      // Show maintenance screen BETWEEN mobile and desktop (475px - 1440px)
+      // Allow normal website on very small mobile (<475px) and large desktop (>1440px)
+      setShowMaintenance(width > 475 && width <= 1600);
     };
 
     checkViewport(); // Initial check
