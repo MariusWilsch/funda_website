@@ -19,19 +19,19 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative max-w-7xl mx-auto text-center w-full">
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-warm-gray-900 leading-tight mb-4 xs:mb-5 sm:mb-6">
+        <h1 className="text-size-hero text-warm-gray-900 leading-tight mb-4 xs:mb-5 sm:mb-6">
           Moderne Ästhetik.
           <br />
           <span>Natürliche Ergebnisse.</span>
         </h1>
 
-        <p className="text-base xs:text-lg md:text-xl text-warm-gray-700 max-w-2xl mx-auto leading-relaxed mb-4 xs:mb-5 sm:mb-6">
+        <p className="text-size-body-large text-warm-gray-700 max-w-2xl mx-auto leading-relaxed mb-4 xs:mb-5 sm:mb-6">
           Bei The PrettyPoint bekommst du Behandlungen, die deinen natürlichen
           Glow verstärken – nicht verändern.
         </p>
 
         {/* Treatment Types */}
-        <p className="text-sm xs:text-base text-black mb-4 xs:mb-5 sm:mb-6">
+        <p className="text-size-body text-black mb-4 xs:mb-5 sm:mb-6">
           Botox • Hyaluron • Lipolyse • PRP
         </p>
         {/* Trust Badge */}
@@ -50,17 +50,23 @@ export function HeroSection() {
               variant="primary"
               size="lg"
               className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
-              text-sm xs:text-base sm:text-lg font-bold px-4 xs:px-6 sm:px-8 py-4 xs:py-5 sm:py-6 bg-bordeaux-600 hover:bg-bordeaux-700 text-white w-full max-w-full min-h-[4rem] xs:min-h-[4.5rem] sm:min-h-[5rem] flex items-center justify-center"
+              text-size-body font-bold px-4 xs:px-6 sm:px-8 py-4 xs:py-5 sm:py-6 bg-bordeaux-600 hover:bg-bordeaux-700 text-white w-full max-w-full min-h-[4rem] xs:min-h-[4.5rem] sm:min-h-[5rem] flex items-center justify-center"
             >
               <div className="text-center w-full h-full flex flex-col justify-center items-center space-y-1">
                 <div className="font-bold leading-relaxed">
-                  <div className="block xs:hidden text-base">Jetzt buchen</div>
+                  <div className="block xs:hidden text-size-body">
+                    Jetzt buchen
+                  </div>
                   <div className="hidden xs:block">
-                    <div className="text-sm xs:text-base sm:text-lg leading-relaxed">Bereit für deinen</div>
-                    <div className="text-sm xs:text-base sm:text-lg leading-relaxed">PrettyPoint-Moment?</div>
+                    <div className="text-size-body leading-relaxed">
+                      Bereit für deinen
+                    </div>
+                    <div className="text-size-body leading-relaxed">
+                      PrettyPoint-Moment?
+                    </div>
                   </div>
                 </div>
-                <div className="text-xs xs:text-sm opacity-90 font-medium hidden xs:block mt-1">
+                <div className="text-size-small opacity-90 font-medium hidden xs:block mt-1">
                   Jetzt buchen
                 </div>
               </div>
@@ -73,9 +79,14 @@ export function HeroSection() {
               variant="ghost"
               size="lg"
               className="hidden sm:flex text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white
-              bg-transparent px-4 xs:px-6 sm:px-8 py-4 xs:py-5 sm:py-4 text-sm xs:text-base sm:text-lg w-full max-w-full overflow-hidden"
+              bg-transparent px-4 xs:px-6 sm:px-8 py-4 xs:py-5 sm:py-4 text-size-body w-full max-w-full overflow-hidden"
             >
-              <a href="#services" className="overflow-hidden text-ellipsis whitespace-nowrap">Behandlungen ansehen</a>
+              <a
+                href="#services"
+                className="overflow-hidden text-ellipsis whitespace-nowrap"
+              >
+                Behandlungen ansehen
+              </a>
             </Button>
           </div>
         </div>

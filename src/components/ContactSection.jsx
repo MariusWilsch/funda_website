@@ -15,7 +15,7 @@ export function ContactSection() {
       <div className="container-responsive">
         {/* Main Heading */}
         <div className="text-center mb-12 xs:mb-16 sm:mb-20">
-          <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-foreground leading-tight tracking-tight">
+          <h2 className="text-size-h1 text-foreground leading-tight tracking-tight">
             {heading}
           </h2>
         </div>
@@ -29,21 +29,21 @@ export function ContactSection() {
               <div className="space-y-6 xs:space-y-7 sm:space-y-8">
                 {/* Welcome Section */}
                 <div className="text-center">
-                  <h3 className="text-2xl xs:text-3xl font-bold text-foreground mb-4 xs:mb-5 sm:mb-6 leading-snug tracking-tight">
+                  <h3 className="text-size-h2 text-foreground mb-4 xs:mb-5 sm:mb-6 leading-snug tracking-tight">
                     {leftColumn.welcome.title}
                   </h3>
 
-                  <p className="text-sm xs:text-base text-muted-foreground leading-relaxed mb-4 xs:mb-5 sm:mb-6">
+                  <p className="text-size-body text-muted-foreground leading-relaxed mb-4 xs:mb-5 sm:mb-6">
                     {leftColumn.welcome.subtitle}
                   </p>
                   <Separator className="w-24 mx-auto bg-bordeaux-500" />
                 </div>
                 {/* Section 2 */}
                 <div className="space-y-3 xs:space-y-4">
-                  <h4 className="text-base xs:text-lg font-semibold text-foreground leading-snug">
+                  <h4 className="text-size-h4 text-foreground leading-snug">
                     {leftColumn.section2.headline}
                   </h4>
-                  <p className="text-sm xs:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-size-body text-muted-foreground leading-relaxed">
                     {leftColumn.section2.body}
                   </p>
                 </div>
@@ -72,10 +72,10 @@ export function ContactSection() {
 
             {/* Call to Action Card */}
             <div className="bg-muted/30 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-muted text-center w-full max-w-full">
-              <h4 className="text-xl xs:text-2xl font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
+              <h4 className="text-size-h3 text-foreground mb-2 xs:mb-3 sm:mb-4">
                 {leftColumn.callToAction.title}
               </h4>
-              <p className="text-base xs:text-lg text-muted-foreground mb-5 xs:mb-6">
+              <p className="text-size-body-large text-muted-foreground mb-5 xs:mb-6">
                 {leftColumn.callToAction.subtitle}
               </p>
               <div className="w-full max-w-full overflow-hidden px-2">
@@ -88,10 +88,10 @@ export function ContactSection() {
           <div className="flex flex-col justify-start gap-4 xs:gap-5 sm:gap-6 w-full max-w-full overflow-hidden pr-2">
             {/* Quick Contact Box */}
             <div className="bg-muted/30 rounded-lg xs:rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-5 border border-muted w-full max-w-full overflow-hidden mr-2">
-              <h4 className="text-base xs:text-lg font-semibold text-foreground mb-2 leading-snug tracking-tight break-words">
+              <h4 className="text-size-h4 text-foreground mb-2 leading-snug tracking-tight break-words">
                 {rightColumn.quickContact.title}
               </h4>
-              <p className="text-xs xs:text-sm text-muted-foreground mb-5 xs:mb-6 leading-loose">
+              <p className="text-size-small text-muted-foreground mb-5 xs:mb-6 leading-loose">
                 {rightColumn.quickContact.subtitle}
               </p>
               <div className="space-y-2 xs:space-y-3 mb-6 xs:mb-7 sm:mb-8">
@@ -101,7 +101,7 @@ export function ContactSection() {
                     className="flex items-center space-x-2 xs:space-x-3"
                   >
                     <Check className="h-4 w-4 xs:h-5 xs:w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-xs xs:text-sm text-foreground leading-loose">
+                    <span className="text-size-small text-foreground leading-loose">
                       {benefit}
                     </span>
                   </div>
@@ -110,7 +110,7 @@ export function ContactSection() {
               <div className="w-full max-w-full overflow-hidden px-1">
                 <Button
                   asChild
-                  className="w-full bg-primary hover:bg-primary/90 text-white text-xs xs:text-sm py-2 px-2 xs:px-3 shadow-lg hover:shadow-xl transition-all duration-300 max-w-full overflow-hidden text-center"
+                  className="w-full bg-primary hover:bg-primary/90 text-white text-size-small py-2 px-2 xs:px-3 shadow-lg hover:shadow-xl transition-all duration-300 max-w-full overflow-hidden text-center"
                 >
                   <a
                     href={`https://wa.me/${rightColumn.quickContact.whatsappButton.phoneNumber.replace(
@@ -129,18 +129,18 @@ export function ContactSection() {
 
             {/* Doctor Information */}
             <div className="bg-background rounded-lg xs:rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-5 border border-muted shadow-sm w-full max-w-full overflow-hidden mr-2">
-              <h4 className="text-base xs:text-lg font-semibold text-foreground mb-1 leading-snug tracking-tight break-words">
+              <h4 className="text-size-h4 text-foreground mb-1 leading-snug tracking-tight break-words">
                 {rightColumn.doctorInfo.name}
               </h4>
-              <p className="text-xs xs:text-sm text-primary font-medium mb-4 xs:mb-5 leading-loose tracking-wide break-words">
+              <p className="text-size-small text-primary font-medium mb-4 xs:mb-5 leading-loose tracking-wide break-words">
                 {rightColumn.doctorInfo.title}
               </p>
               <div className="space-y-3 xs:space-y-4">
                 <div>
-                  <p className="text-xs xs:text-sm font-medium text-foreground mb-1 leading-loose tracking-wide">
+                  <p className="text-size-small font-medium text-foreground mb-1 leading-loose tracking-wide">
                     Praxisadresse:
                   </p>
-                  <p className="text-xs xs:text-sm text-muted-foreground leading-loose mb-1">
+                  <p className="text-size-small text-muted-foreground leading-loose mb-1">
                     {rightColumn.doctorInfo.contact.address}
                   </p>
                 </div>
@@ -148,7 +148,7 @@ export function ContactSection() {
                 {/* Phone */}
                 <div>
                   <div>
-                    <p className="text-xs xs:text-sm font-medium text-foreground leading-loose tracking-wide mb-1">
+                    <p className="text-size-small font-medium text-foreground leading-loose tracking-wide mb-1">
                       Telefon:
                     </p>
                     <a
@@ -156,7 +156,7 @@ export function ContactSection() {
                         /\s/g,
                         ""
                       )}`}
-                      className="text-xs xs:text-sm text-muted-foreground hover:text-primary transition-colors leading-loose"
+                      className="text-size-small text-muted-foreground hover:text-primary transition-colors leading-loose"
                     >
                       {rightColumn.doctorInfo.contact.phone}
                     </a>
@@ -166,12 +166,12 @@ export function ContactSection() {
                 {/* E-Mail */}
                 <div>
                   <div>
-                    <p className="text-xs xs:text-sm font-medium text-foreground leading-loose tracking-wide mb-1">
+                    <p className="text-size-small font-medium text-foreground leading-loose tracking-wide mb-1">
                       E-Mail:
                     </p>
                     <a
                       href={`mailto:${rightColumn.doctorInfo.contact.email}`}
-                      className="text-xs xs:text-sm text-muted-foreground hover:text-primary transition-colors leading-loose break-all"
+                      className="text-size-small text-muted-foreground hover:text-primary transition-colors leading-loose break-all"
                     >
                       {rightColumn.doctorInfo.contact.email}
                     </a>

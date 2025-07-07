@@ -41,6 +41,47 @@
 }
 
 @layer components {
+  /* Text Sizing System - Consistent font-size, font-weight, and line-height only */
+
+  /* Hero Text Sizing */
+  .text-size-hero {
+    @apply text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold;
+  }
+
+  /* Heading Sizing Levels */
+  .text-size-h1 {
+    @apply text-2xl xs:text-3xl sm:text-4xl font-bold;
+  }
+
+  .text-size-h2 {
+    @apply text-xl xs:text-2xl sm:text-3xl font-bold;
+  }
+
+  .text-size-h3 {
+    @apply text-lg xs:text-xl sm:text-2xl font-semibold;
+  }
+
+  .text-size-h4 {
+    @apply text-base xs:text-lg font-semibold;
+  }
+
+  /* Body Text Sizing */
+  .text-size-body-large {
+    @apply text-base xs:text-lg font-normal;
+  }
+
+  .text-size-body {
+    @apply text-sm xs:text-base font-normal;
+  }
+
+  .text-size-small {
+    @apply text-xs xs:text-sm font-normal;
+  }
+
+  .text-size-caption {
+    @apply text-xs font-normal;
+  }
+
   /* Force serif typography on card titles */
   .card-title-serif {
     font-family: "Playfair Display", serif !important;
@@ -157,7 +198,12 @@
   }
 
   /* Typography improvements */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;

@@ -7,12 +7,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) => (
+export const ServiceContent = ({
+  serviceData,
+  isMobile = false,
+  closeModal,
+}) => (
   <div className={`${isMobile ? "space-y-8" : "space-y-12"}`}>
     {/* Description */}
     <div
       className={`${
-        isMobile ? "text-base" : "text-lg"
+        isMobile ? "text-size-body" : "text-size-body-large"
       } leading-relaxed text-foreground whitespace-pre-line max-w-prose`}
     >
       {serviceData.description}
@@ -22,7 +26,7 @@ export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) =>
     <Card className="bg-card border-l-4 border-l-primary shadow-lg">
       <CardContent className={`${isMobile ? "p-6" : "p-8"}`}>
         <h3
-          className={`${isMobile ? "text-lg" : "text-xl"} font-bold ${
+          className={`${isMobile ? "text-size-h3" : "text-size-h3"} ${
             isMobile ? "mb-4" : "mb-6"
           } text-foreground card-title-serif`}
         >
@@ -31,10 +35,10 @@ export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) =>
         <div
           className={`grid grid-cols-1 sm:grid-cols-2 ${
             isMobile ? "gap-6" : "gap-8"
-          } text-base`}
+          } text-size-body`}
         >
           <div className="flex flex-col space-y-2">
-            <span className="font-semibold text-primary text-sm uppercase tracking-wide">
+            <span className="font-semibold text-primary text-size-small uppercase tracking-wide">
               Dauer:
             </span>
             <span className="text-foreground font-medium">
@@ -42,7 +46,7 @@ export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) =>
             </span>
           </div>
           <div className="flex flex-col space-y-2">
-            <span className="font-semibold text-primary text-sm uppercase tracking-wide">
+            <span className="font-semibold text-primary text-size-small uppercase tracking-wide">
               Wirkung:
             </span>
             <span className="text-foreground font-medium">
@@ -50,7 +54,7 @@ export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) =>
             </span>
           </div>
           <div className="flex flex-col space-y-2">
-            <span className="font-semibold text-primary text-sm uppercase tracking-wide">
+            <span className="font-semibold text-primary text-size-small uppercase tracking-wide">
               Haltbarkeit:
             </span>
             <span className="text-foreground font-medium">
@@ -58,7 +62,7 @@ export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) =>
             </span>
           </div>
           <div className="flex flex-col space-y-2">
-            <span className="font-semibold text-primary text-sm uppercase tracking-wide">
+            <span className="font-semibold text-primary text-size-small uppercase tracking-wide">
               Ausfallzeit:
             </span>
             <span className="text-foreground font-medium">
@@ -106,9 +110,7 @@ export const ServiceContent = ({ serviceData, isMobile = false, closeModal }) =>
               className={`${isMobile ? "px-4 pb-4" : "px-6 pb-6"}`}
             >
               <div
-                className={`${
-                  isMobile ? "space-y-3 pt-3" : "space-y-4 pt-4"
-                }`}
+                className={`${isMobile ? "space-y-3 pt-3" : "space-y-4 pt-4"}`}
               >
                 {group.items.map((item, itemIndex) => (
                   <div

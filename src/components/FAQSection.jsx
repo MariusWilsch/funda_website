@@ -37,10 +37,10 @@ export function FAQSection() {
               <HelpCircle className="h-8 w-8 text-bordeaux-600" />
             </div>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-warm-gray-900 mb-4">
+          <h2 className="text-size-h1 text-warm-gray-900 mb-4">
             Häufig gestellte Fragen
           </h2>
-          <p className="text-lg text-warm-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-size-body-large text-warm-gray-600 max-w-3xl mx-auto leading-relaxed">
             Transparente Antworten zu allen Behandlungen. Als 100% ärztlich
             geführte Praxis legen wir Wert auf umfassende Aufklärung und
             ehrliche Beratung.
@@ -66,10 +66,12 @@ export function FAQSection() {
                   className="text-center p-6 bg-card rounded-lg shadow-sm border border-warm-gray-200"
                 >
                   <indicator.icon className="h-8 w-8 text-bordeaux-600 mx-auto mb-3" />
-                  <h3 className="font-semibold text-warm-gray-900 mb-2">
+                  <h3 className="text-size-h4 text-warm-gray-900 mb-2">
                     {indicator.title}
                   </h3>
-                  <p className="text-sm text-warm-gray-600">{indicator.text}</p>
+                  <p className="text-size-small text-warm-gray-600">
+                    {indicator.text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -78,10 +80,10 @@ export function FAQSection() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center bg-card p-8 rounded-lg shadow-sm border border-warm-gray-200">
-          <h3 className="text-2xl font-bold text-warm-gray-900 mb-4">
+          <h3 className="text-size-h2 text-warm-gray-900 mb-4">
             Ihre Frage war nicht dabei?
           </h3>
-          <p className="text-warm-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-size-body text-warm-gray-600 mb-6 max-w-2xl mx-auto">
             Kontaktieren Sie uns gerne direkt. Wir nehmen uns Zeit für Ihre
             individuellen Fragen und beraten Sie umfassend zu allen
             Behandlungsmöglichkeiten.
