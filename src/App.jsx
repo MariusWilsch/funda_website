@@ -8,6 +8,7 @@ import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { IntroSplash } from "./components/IntroSplash";
 import { MaintenanceWrapper } from "./components/MaintenanceWrapper";
+import { SectionContainer } from "./components/ui/SectionContainer";
 
 function App() {
   const [isIntroMounted, setIsIntroMounted] = useState(true);
@@ -42,10 +43,12 @@ function App() {
           <Header />
           <main className="relative">
             <HeroSection />
-            <ServicesSection />
-            <BookingSection />
-            <FAQSection />
-            <ContactSection />
+            <SectionContainer>
+              <ServicesSection />
+              <BookingSection />
+              <FAQSection />
+              <ContactSection />
+            </SectionContainer>
           </main>
           <Footer />
         </div>

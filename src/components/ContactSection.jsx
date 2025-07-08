@@ -19,7 +19,7 @@ export function ContactSection() {
         </h2>
 
         {/* Two Column Layout */}
-        <div className="grid md:grid-cols-[70%_30%] gap-8 xs:gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+        <div className="grid xl:grid-cols-[70%_30%] gap-8 xs:gap-10 sm:gap-12 md:gap-16 lg:gap-20">
           {/* Left Column Wrapper */}
           <div className="flex flex-col gap-8 xs:gap-10 sm:gap-12">
             {/* Main Content Card */}

@@ -44,12 +44,12 @@ export function HeroSection() {
           </div>
         </div> */}
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 xs:gap-5 sm:gap-6 mt-6 xs:mt-7 sm:mt-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 xs:gap-5 sm:gap-6 mt-6 xs:mt-7 sm:mt-8">
           <BookingButton
             variant="primary"
             size="2xl"
             className="shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300
-            text-base xs:text-lg sm:text-xl md:text-2xl font-bold px-6 xs:px-8 sm:px-12 md:px-16 py-5 xs:py-6 sm:py-7 md:py-8 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
+            text-base xs:text-lg sm:text-xl md:text-2xl font-bold px-6 xs:px-8 sm:px-12 md:px-16 py-5 xs:py-7 sm:py-8 md:py-9 bg-bordeaux-600 hover:bg-bordeaux-700 text-white"
           >
             <div className="text-center">
               <div className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold leading-tight">
@@ -68,7 +68,7 @@ export function HeroSection() {
             asChild
             variant="ghost"
             size="lg"
-            className="hidden sm:flex text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white
+            className="hidden lg:flex text-warm-gray-900 border border-warm-gray-900 hover:bg-warm-gray-900 hover:text-white
             bg-transparent px-4 xs:px-6 sm:px-8 py-4 xs:py-5 sm:py-4 text-sm xs:text-base sm:text-lg"
           >
             <a href="#services">Behandlungen ansehen</a>

@@ -34,11 +34,8 @@ export function FeaturedServiceCard({
                 <CardTitle className="text-3xl font-bold text-warm-gray-900 leading-tight card-title-serif">
                   {title}
                 </CardTitle>
-                <span className="text-xs text-warm-gray-600 font-medium">
-                  Meistgebuchte Behandlung
-                </span>
               </div>
-              <Badge className="text-white font-semibold px-4 py-2 bg-bordeaux-600 text-xl">
+              <Badge className="text-white font-semibold px-4 py-2 bg-bordeaux-600 text-xl whitespace-nowrap">
                 ab {startingPrice}
               </Badge>
             </div>
@@ -88,9 +85,6 @@ export function FeaturedServiceCard({
             <div className="text-bordeaux-600 font-semibold text-3xl pt-2">
               ab {startingPrice}
             </div>
-            <span className="text-xs text-warm-gray-600 font-medium">
-              Meistgebuchte Behandlung
-            </span>
           </div>
         </CardHeader>
 

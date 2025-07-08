@@ -64,21 +64,28 @@ export function Header() {
             </div>
 
             {/* Right Aligned Group */}
-            <div className="flex items-center space-x-4 md:space-x-8">
+            <div className="flex items-center space-x-4 lg:space-x-8">
               {/* Desktop Navigation */}
-              <Navigation />
+              <div className="hidden lg:flex">
+                <Navigation />
+              </div>
 
               {/* Desktop CTA Buttons */}
-              <div className="hidden md:flex items-center space-x-3">
+              <div className="hidden lg:flex items-center space-x-3">
                 <BookingButton
                   variant="primary"
                   size={isScrolled ? "default" : "lg"}
                 />
-                <WhatsAppButton size={isScrolled ? "default" : "lg"} />
+                <div className="hidden xl:flex">
+                  <WhatsAppButton size={isScrolled ? "default" : "lg"} />
+                </div>
+                <div className="flex xl:hidden">
+                  <WhatsAppIconButton />
+                </div>
               </div>
 
               {/* Mobile: WhatsApp Icon + Menu */}
-              <div className="md:hidden flex items-center space-x-3">
+              <div className="lg:hidden flex items-center space-x-3">
                 <WhatsAppIconButton />
                 <MobileMenu />
               </div>

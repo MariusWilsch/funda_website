@@ -17,7 +17,7 @@ export function MobileMenu() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden text-warm-gray-700 hover:text-bordeaux-600 hover:bg-warm-gray-50"
+          className="text-warm-gray-700 hover:text-bordeaux-600 hover:bg-warm-gray-50"
           aria-label="Menu öffnen"
         >
           <Menu className="h-6 w-6" />
