@@ -72,9 +72,9 @@ export function Footer() {
         </div>
 
         {/* Price Disclaimer */}
-        <div className="py-3 border-t border-warm-gray-800 text-center">
-          <p className="text-xs text-warm-gray-400">
-            Preise inkl. MwSt. | Angaben sind Ab-Preise – individuelle Berechnung je nach Umfang und Lokalisation
+        <div className="py-4 border-t border-warm-gray-800 text-center">
+          <p className="text-xs sm:text-sm text-warm-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Alle Preise verstehen sich als Endpreise in Euro inklusive der gesetzlichen Mehrwertsteuer, sofern nicht anders angegeben. Die genannten Behandlungskosten dienen der Orientierung. Je nach individuellem Behandlungsaufwand, Materialverbrauch und gewünschtem Ergebnis können die tatsächlichen Kosten abweichen. Eine verbindliche Preisnennung erfolgt nach einem persönlichen Beratungsgespräch und einer medizinischen Untersuchung. Änderungen und Irrtümer vorbehalten.
           </p>
         </div>
 
