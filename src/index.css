@@ -213,15 +213,4 @@
       transition: none !important;
     }
   }
-    max-width: 1000px !important;
-    max-height: 800px !important;
-    min-width: 600px !important;
-    min-height: 500px !important;
-  }
-
-  /* Ensure modal backdrop and positioning */
-  [data-cal-namespace],
-  .cal-embed-modal-backdrop {
-    z-index: 9999 !important;
-  }
 }
