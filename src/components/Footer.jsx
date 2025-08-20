@@ -71,6 +71,13 @@ export function Footer() {
           </FooterColumn>
         </div>
 
+        {/* Price Disclaimer */}
+        <div className="py-3 border-t border-warm-gray-800 text-center">
+          <p className="text-xs text-warm-gray-400">
+            Preise inkl. MwSt. | Angaben sind Ab-Preise – individuelle Berechnung je nach Umfang und Lokalisation
+          </p>
+        </div>
+
         {/* Sub-Footer */}
         <div className="py-4 xs:py-5 sm:py-6 border-t border-warm-gray-800 text-center text-xs xs:text-sm text-warm-gray-400">
           <p>© {currentYear} The PrettyPoint - Alle Rechte vorbehalten</p>
