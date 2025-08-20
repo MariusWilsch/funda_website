@@ -14,10 +14,10 @@ export const contactInfo = {
 
   // Address information
   address: {
-    street: "Hefnersteig 1",
-    postalCode: "13629",
+    street: "Kantstraße 54",
+    postalCode: "10627",
     city: "Berlin",
-    full: "Hefnersteig 1, 13629 Berlin",
+    full: "Kantstraße 54, 10627 Berlin",
   },
 
   // Social media
