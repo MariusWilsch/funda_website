@@ -141,14 +141,78 @@
   }
 }
 
-/* Cal.com Modal Sizing - Increase dimensions for better user experience */
+/* Doctolib Widget Styling */
 @layer components {
-  /* Target Cal.com modal containers and iframes */
-  [data-cal-namespace] iframe,
-  .cal-embed-modal,
-  [data-cal-link] + div iframe {
-    width: 90vw !important;
-    height: 85vh !important;
+  .doctolib-widget {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    display: block;
+    text-align: center;
+    background: #00264c;
+    color: #00264c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    width: 86px;
+    border-radius: 4px 0 0 4px;
+    padding: 5px;
+    z-index: 999;
+    opacity: 0.8;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+  }
+  
+  .doctolib-widget a {
+    display: block;
+    color: #00264c;
+    text-decoration: none;
+    padding: 6px;
+    margin-top: 5px;
+    background: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: 0.2s;
+  }
+  
+  .doctolib-widget a:hover,
+  .doctolib-widget a:focus {
+    opacity: 0.9;
+    outline: 2px solid #f5f5f5;
+    outline-offset: 2px;
+  }
+  
+  .doctolib-widget img {
+    display: inline-block;
+    height: 18px;
+    margin: 3px 0;
+    vertical-align: middle;
+    width: auto;
+  }
+  
+  @media (max-width: 600px) {
+    .doctolib-widget {
+      top: auto;
+      bottom: 10px;
+      right: 0px;
+      width: 86px;
+      padding: 4px;
+    }
+    
+    .doctolib-widget a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 5px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
     max-width: 1000px !important;
     max-height: 800px !important;
     min-width: 600px !important;

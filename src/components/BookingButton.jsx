@@ -7,34 +7,18 @@ export function BookingButton({
   className = "",
   onClick,
   onModalClose,
+  href = "https://www.doctolib.de/praktischer-arzt/berlin/funda-kircil?utm_campaign=website-button&utm_source=funda-kircil-website-button&utm_medium=referral&utm_content=option-8&utm_term=funda-kircil",
 }) {
   const handleBookingClick = (e) => {
-    e.preventDefault();
-
     // Close modal first (if provided)
     if (onModalClose) {
       onModalClose();
-      console.log("📍 [BookingButton] Closing modal before scroll");
+      console.log("📍 [BookingButton] Closing modal before opening Doctolib");
     } 
 
-    // Scroll to booking section smoothly
-    const bookingSection = document.getElementById("booking-section");
-    if (bookingSection) {
-      bookingSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-      console.log("📍 [BookingButton] Scrolling to booking section");
-
-      // Add a subtle highlight effect after scrolling
-      setTimeout(() => {
-        bookingSection.style.transform = "scale(1.01)";
-        bookingSection.style.transition = "transform 0.3s ease";
-        setTimeout(() => {
-          bookingSection.style.transform = "scale(1)";
-        }, 300);
-      }, 800); // Wait for scroll to complete
-    }
+    // Open Doctolib in new tab
+    window.open(href, "_blank", "noopener,noreferrer");
+    console.log("📍 [BookingButton] Opening Doctolib booking");
 
     // Call any additional onClick handler
     onClick?.(e);

@@ -1,5 +1,5 @@
 export function BookingProvider({ children }) {
-  // Cal.com API is now initialized directly in BookingSection
-  // This provider just wraps the app for future Cal.com features
+  // Legacy provider - no longer needed with Doctolib external booking
+  // Keeping for backwards compatibility, remove in future cleanup
   return <>{children}</>;
 }
